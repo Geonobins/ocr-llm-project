@@ -1,0 +1,34 @@
+{
+  "command": "G:\\Freelance\\ocr_llm_project\\ocr_llm_project\\evaluation\\vlm_baseline.py --tokens 1024",
+  "started": "2026-10-20 23:54:32",
+  "experiment": "VLM baseline",
+  "model": "Qwen/Qwen2-VL-2B-Instruct",
+  "prompt": "Read this invoice and extract three fields: the invoice number, the invoice date and the total amount due. Answer with JSON only, exactly in this form: {\"invoice_number\": \"...\", \"date\": \"...\", \"total\": \"...\"}. Copy each value as it is written on the invoice. Use null for a field that is not on the invoice.",
+  "max_visual_tokens": [
+    1024
+  ],
+  "documents": 600,
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "transformers": "5.7.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0",
+    "sentence_transformers": "6.1.0",
+    "pytesseract": "0.3.13",
+    "rapidfuzz": "3.14.6",
+    "tesseract": "5.4.0.20240606"
+  },
+  "finished": "2026-10-21 00:35:00",
+  "duration_minutes": 40.5
+}

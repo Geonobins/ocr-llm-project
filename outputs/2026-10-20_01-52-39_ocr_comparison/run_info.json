@@ -1,0 +1,48 @@
+{
+  "command": "G:\\Freelance\\ocr_llm_project\\ocr_llm_project\\evaluation\\ocr_comparison.py",
+  "started": "2026-10-20 01:52:54",
+  "experiment": "OCR engine comparison",
+  "engines": [
+    "tesseract",
+    "easyocr"
+  ],
+  "documents": 600,
+  "pipeline": {
+    "llm": "google/flan-t5-base",
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+    "ocr_layout": "rows",
+    "reconcile_totals": true,
+    "max_input_tokens": 512,
+    "max_new_tokens_fast": 12,
+    "max_new_tokens_full": 24,
+    "default_routing_thresholds": {
+      "max_tokens_fast": 300,
+      "min_confidence_fast": 85.0
+    },
+    "gpu_hourly_cost_eur": 0.35
+  },
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "transformers": "5.7.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0",
+    "sentence_transformers": "6.1.0",
+    "pytesseract": "0.3.13",
+    "rapidfuzz": "3.14.6",
+    "tesseract": "5.4.0.20240606",
+    "easyocr": "1.7.2"
+  },
+  "finished": "2026-10-20 23:39:15",
+  "duration_minutes": 1306.4
+}

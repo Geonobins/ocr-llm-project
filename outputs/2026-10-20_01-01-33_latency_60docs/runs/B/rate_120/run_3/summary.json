@@ -1,0 +1,35 @@
+{
+  "variant": "B",
+  "description": "Architecture B as benchmarked: a batch goes to the GPU once 8 invoices are read",
+  "rate_per_min": 120,
+  "run": 3,
+  "seed": 3120,
+  "timestamp": "2026-10-20 01:32:46",
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "metrics": {
+    "rate_per_min": 120,
+    "documents": 60,
+    "errors": 0,
+    "mean_latency_s": 3.4729,
+    "p50_latency_s": 2.763,
+    "p95_latency_s": 6.7542,
+    "max_latency_s": 7.8691,
+    "mean_service_time_s": 0.7197,
+    "mean_ocr_time_s": 0.5666,
+    "mean_llm_time_s": 0.1289,
+    "arrival_span_s": 34.71,
+    "finished_after_s": 36.85,
+    "throughput_docs_per_min": 97.69
+  },
+  "f1_all": 0.9444
+}

@@ -1,0 +1,229 @@
+{
+  "config_name": "B-8bit",
+  "architecture": "B",
+  "description": "B with every document on an 8-bit model",
+  "config": {
+    "ocr_workers": 3,
+    "batch_size": 8,
+    "use_cache": true,
+    "routing": "all_fast",
+    "fast_precision": "8bit",
+    "full_precision": "fp32",
+    "thresholds": {
+      "max_tokens_fast": 300,
+      "min_confidence_fast": 85.0
+    }
+  },
+  "run": 1,
+  "timestamp": "2026-10-19 09:38:27",
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "metrics": {
+    "documents": 600,
+    "processed": 600,
+    "errors": 0,
+    "cached": 0,
+    "wall_time_s": 166.563,
+    "throughput_docs_per_min": 216.134,
+    "mean_latency_s": 84.371,
+    "p50_latency_s": 77.5811,
+    "p95_latency_s": 159.9169,
+    "mean_service_time_s": 0.8881,
+    "mean_ocr_time_s": 0.6237,
+    "mean_embed_time_s": 0.0085,
+    "mean_llm_time_s": 0.2559,
+    "route_fast": 600,
+    "route_full": 0,
+    "cost_total_eur": 0.01619,
+    "cost_per_doc_eur": 2.7e-05,
+    "cost_per_100_docs_eur": 0.0027,
+    "peak_rss_mb": 1989.8,
+    "mean_rss_mb": 1707.4,
+    "peak_gpu_mb": 2548.5,
+    "baseline_gpu_mb": 936.5,
+    "cache_hits": 0,
+    "cache_misses": 600,
+    "cache_entries": 565,
+    "model_load_time_s": 2.03,
+    "torch_allocated_after_load_mb": 590.9,
+    "torch_peak_allocated_mb": 1176.2
+  },
+  "scores": {
+    "all": {
+      "invoice_number": {
+        "precision": 0.9633,
+        "recall": 0.9731,
+        "f1": 0.9682,
+        "accuracy": 0.9633,
+        "tp": 578,
+        "fp": 22,
+        "fn": 16,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9517,
+        "recall": 0.9645,
+        "f1": 0.9581,
+        "accuracy": 0.9517,
+        "tp": 571,
+        "fp": 29,
+        "fn": 21,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8898,
+        "recall": 0.8913,
+        "f1": 0.8906,
+        "accuracy": 0.8898,
+        "tp": 533,
+        "fp": 66,
+        "fn": 65,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.935,
+        "recall": 0.9428,
+        "f1": 0.9389,
+        "accuracy": 0.935,
+        "tp": 1682,
+        "fp": 117,
+        "fn": 102,
+        "tn": 0
+      },
+      "documents": 600,
+      "documents_fully_correct": 502,
+      "document_accuracy": 0.8367
+    },
+    "real": {
+      "invoice_number": {
+        "precision": 0.93,
+        "recall": 0.949,
+        "f1": 0.9394,
+        "accuracy": 0.93,
+        "tp": 279,
+        "fp": 21,
+        "fn": 15,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9033,
+        "recall": 0.9281,
+        "f1": 0.9155,
+        "accuracy": 0.9033,
+        "tp": 271,
+        "fp": 29,
+        "fn": 21,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8161,
+        "recall": 0.8188,
+        "f1": 0.8174,
+        "accuracy": 0.8161,
+        "tp": 244,
+        "fp": 55,
+        "fn": 54,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.8832,
+        "recall": 0.8982,
+        "f1": 0.8906,
+        "accuracy": 0.8832,
+        "tp": 794,
+        "fp": 105,
+        "fn": 90,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 214,
+      "document_accuracy": 0.7133
+    },
+    "synthetic": {
+      "invoice_number": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 299,
+        "fp": 1,
+        "fn": 1,
+        "tn": 0
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 300,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.9633,
+        "recall": 0.9633,
+        "f1": 0.9633,
+        "accuracy": 0.9633,
+        "tp": 289,
+        "fp": 11,
+        "fn": 11,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9867,
+        "recall": 0.9867,
+        "f1": 0.9867,
+        "accuracy": 0.9867,
+        "tp": 888,
+        "fp": 12,
+        "fn": 12,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 288,
+      "document_accuracy": 0.96
+    }
+  },
+  "review": {
+    "all": {
+      "documents": 600,
+      "straight_through_rate": 0.9167,
+      "flagged": 50,
+      "accuracy_auto_accepted": 0.9073,
+      "accuracy_without_review": 0.8367,
+      "wrong_documents": 98,
+      "wrong_caught_by_flag": 47,
+      "flag_precision": 0.94
+    },
+    "real": {
+      "documents": 300,
+      "straight_through_rate": 0.8733,
+      "flagged": 38,
+      "accuracy_auto_accepted": 0.8092,
+      "accuracy_without_review": 0.7133,
+      "wrong_documents": 86,
+      "wrong_caught_by_flag": 36,
+      "flag_precision": 0.9474
+    },
+    "synthetic": {
+      "documents": 300,
+      "straight_through_rate": 0.96,
+      "flagged": 12,
+      "accuracy_auto_accepted": 0.9965,
+      "accuracy_without_review": 0.96,
+      "wrong_documents": 12,
+      "wrong_caught_by_flag": 11,
+      "flag_precision": 0.9167
+    }
+  }
+}

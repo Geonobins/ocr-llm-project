@@ -1,0 +1,8 @@
+{
+  "max_tokens_fast": 525,
+  "min_confidence_fast": 70.0,
+  "fast_share": 0.9983,
+  "field_accuracy": 0.9361,
+  "all_full_field_accuracy": 0.9361,
+  "tolerance": 0.005
+}

@@ -1,0 +1,20 @@
+{"index": 1, "answer": "{\"invoice_number\": \"01234\", \"date\": \"11.02.2030\", \"total\": \"$4400\"}"}
+{"index": 33, "answer": "{\"invoice_number\": \"INV-9497-33\", \"date\": \"August 22, 2024\", \"total\": \"$22,100\"}"}
+{"index": 64, "answer": "{\"invoice_number\": \"INV-2172-64\", \"date\": \"August 22, 2024\", \"total\": \"$35,830\"}"}
+{"index": 96, "answer": "{\"invoice_number\": \"INV-8609-96\", \"date\": \"July 5, 2024\", \"total\": \"$28,470\"}"}
+{"index": 127, "answer": "{\"invoice_number\": \"INV-1205-127\", \"date\": \"May 2, 2024\", \"total\": \"14,640\"}"}
+{"index": 159, "answer": "{\"invoice_number\": \"INV-3099-159\", \"date\": \"August 22, 2024\", \"total\": \"30,170\"}"}
+{"index": 190, "answer": "{\"invoice_number\": \"INV-8379-190\", \"date\": \"June 11, 2024\", \"total\": \"$37,380\"}"}
+{"index": 222, "answer": "{\"invoice_number\": \"INV-7969-222\", \"date\": \"August 22, 2024\", \"total\": \"30,430\"}"}
+{"index": 253, "answer": "{\"invoice_number\": \"INV-5411-253\", \"date\": \"July 5, 2024\", \"total\": \"$5,420\"}"}
+{"index": 285, "answer": "{\"invoice_number\": \"INV-4263-285\", \"date\": \"June 11, 2024\", \"total\": \"$29,730\"}"}
+{"index": 316, "answer": "{\"invoice_number\": \"110\", \"date\": \"FEB 11 2020\", \"total\": \"$1574\"}"}
+{"index": 348, "answer": "{\"invoice_number\": \"12323459\", \"date\": \"08/04/2013\", \"total\": \"81,68\"}"}
+{"index": 379, "answer": "{\"invoice_number\": \"65095335\", \"date\": \"02/15/2017\", \"total\": \"46 910,41\"}"}
+{"index": 411, "answer": "{\"invoice_number\": \"255034\", \"date\": \"July 25, 2023\", \"total\": \"$1,187\"}"}
+{"index": 442, "answer": "{\"invoice_number\": \"PO-621303\", \"date\": \"Oct. 24, 2023\", \"total\": \"$8180\"}"}
+{"index": 474, "answer": "{\"invoice_number\": \"PO-281539\", \"date\": \"Oct. 1, 2023\", \"total\": \"$0.00\"}"}
+{"index": 505, "answer": "{\"invoice_number\": \"56759346\", \"date\": \"02/08/2016\", \"total\": \"64 577,12\"}"}
+{"index": 537, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 568, "answer": "{\"invoice_number\": \"94362\", \"date\": \"Nov 23, 2023\", \"total\": \"119.72\"}"}
+{"index": 600, "answer": "{\"invoice_number\": \"56908352\", \"date\": \"01/11/2015\", \"total\": \"188,11\"}"}

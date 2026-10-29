@@ -1,0 +1,600 @@
+{"index": 1, "answer": "{\"invoice_number\": \"01234\", \"date\": \"11.02.2030\", \"total\": \"$440\"}"}
+{"index": 2, "answer": "{\"invoice_number\": \"01234\", \"date\": \"01 January 2030\", \"total\": \"300\"}"}
+{"index": 3, "answer": "{\"invoice_number\": \"00001\", \"date\": \"MM/DD/YYYY\", \"total\": \"0.00\"}"}
+{"index": 4, "answer": "{\"invoice_number\": \"004513\", \"date\": \"01/01/2019\", \"total\": \"$950\"}"}
+{"index": 5, "answer": "{\"invoice_number\": \"12245\", \"date\": \"07/01/23\", \"total\": \"1,902.05\"}"}
+{"index": 6, "answer": "{\"invoice_number\": \"005\", \"date\": \"MARCH 3, 2020\", \"total\": \"2,874.38\"}"}
+{"index": 7, "answer": "{\"invoice_number\": \"1009-01\", \"date\": \"01/01/18\", \"total\": \"1600.00\"}"}
+{"index": 8, "answer": "{\"invoice_number\": \"00036271\", \"date\": \"01/01/2019\", \"total\": \"$15400\"}"}
+{"index": 9, "answer": "{\"invoice_number\": \"1234\", \"date\": \"18 APRIL, 2027\", \"total\": \"500.00\"}"}
+{"index": 10, "answer": "{\"invoice_number\": \"INV-000002\", \"date\": \"05 Aug 2024\", \"total\": \"$65.06\"}"}
+{"index": 11, "answer": "{\"invoice_number\": \"00003401\", \"date\": \"01/01/19\", \"total\": \"$350\"}"}
+{"index": 12, "answer": "{\"invoice_number\": \"2020 456 865\", \"date\": \"FEB 27 2021\", \"total\": \"5410\"}"}
+{"index": 13, "answer": "{\"invoice_number\": \"INV-ZFR-0001\", \"date\": \"April 19, 2024\", \"total\": \"$55,650\"}"}
+{"index": 14, "answer": "{\"invoice_number\": \"GALT-009\", \"date\": \"Sep 30, 2013\", \"total\": \"11,812.50\"}"}
+{"index": 15, "answer": "{\"invoice_number\": \"1001\", \"date\": \"07/06/2025\", \"total\": \"1650.00\"}"}
+{"index": 16, "answer": "{\"invoice_number\": \"INV-8289-16\", \"date\": \"April 19, 2024\", \"total\": \"$45,130\"}"}
+{"index": 17, "answer": "{\"invoice_number\": \"INV-2912-17\", \"date\": \"June 11, 2024\", \"total\": \"$11,970\"}"}
+{"index": 18, "answer": "{\"invoice_number\": \"INV-9116-18\", \"date\": \"April 19, 2024\", \"total\": \"$45,520\"}"}
+{"index": 19, "answer": "{\"invoice_number\": \"INV-4299-19\", \"date\": \"June 11, 2024\", \"total\": \"$29,470\"}"}
+{"index": 20, "answer": "{\"invoice_number\": \"INV-5441-20\", \"date\": \"April 19, 2024\", \"total\": \"$39,500\"}"}
+{"index": 21, "answer": "{\"invoice_number\": \"INV-9091-21\", \"date\": \"June 11, 2024\", \"total\": \"$36,450\"}"}
+{"index": 22, "answer": "{\"invoice_number\": \"INV-7757-22\", \"date\": \"May 2, 2024\", \"total\": \"$47,580\"}"}
+{"index": 23, "answer": "{\"invoice_number\": \"INV-3936-23\", \"date\": \"June 11, 2024\", \"total\": \"$23,170\"}"}
+{"index": 24, "answer": "{\"invoice_number\": \"INV-2108-24\", \"date\": \"April 19, 2024\", \"total\": \"$46,630\"}"}
+{"index": 25, "answer": "{\"invoice_number\": \"INV-2954-25\", \"date\": \"May 2, 2024\", \"total\": \"$42,680\"}"}
+{"index": 26, "answer": "{\"invoice_number\": \"INV-9965-26\", \"date\": \"July 5, 2024\", \"total\": \"$30,210\"}"}
+{"index": 27, "answer": "{\"invoice_number\": \"INV-1515-27\", \"date\": \"June 11, 2024\", \"total\": \"$29,260\"}"}
+{"index": 28, "answer": "{\"invoice_number\": \"INV-2747-28\", \"date\": \"July 5, 2024\", \"total\": \"$44,250\"}"}
+{"index": 29, "answer": "{\"invoice_number\": \"INV-2120-29\", \"date\": \"July 5, 2024\", \"total\": \"$43,990\"}"}
+{"index": 30, "answer": "{\"invoice_number\": \"INV-2248-30\", \"date\": \"August 22, 2024\", \"total\": \"$31,820\"}"}
+{"index": 31, "answer": "{\"invoice_number\": \"INV-9551-31\", \"date\": \"May 2, 2024\", \"total\": \"$17,380\"}"}
+{"index": 32, "answer": "{\"invoice_number\": \"INV-6846-32\", \"date\": \"July 5, 2024\", \"total\": \"$23,170\"}"}
+{"index": 33, "answer": "{\"invoice_number\": \"INV-9497-33\", \"date\": \"August 22, 2024\", \"total\": \"$22,100\"}"}
+{"index": 34, "answer": "{\"invoice_number\": \"INV-4503-34\", \"date\": \"July 5, 2024\", \"total\": \"$28,190\"}"}
+{"index": 35, "answer": "{\"invoice_number\": \"INV-4668-35\", \"date\": \"May 2, 2024\", \"total\": \"$38,360\"}"}
+{"index": 36, "answer": "{\"invoice_number\": \"INV-3021-36\", \"date\": \"April 19, 2024\", \"total\": \"$24,860\"}"}
+{"index": 37, "answer": "{\"invoice_number\": \"INV-4594-37\", \"date\": \"May 2, 2024\", \"total\": \"$9,330\"}"}
+{"index": 38, "answer": "{\"invoice_number\": \"INV-3289-38\", \"date\": \"April 19, 2024\", \"total\": \"$4,890\"}"}
+{"index": 39, "answer": "{\"invoice_number\": \"INV-6300-39\", \"date\": \"June 11, 2024\", \"total\": \"$21,750\"}"}
+{"index": 40, "answer": "{\"invoice_number\": \"INV-5296-40\", \"date\": \"April 19, 2024\", \"total\": \"$24,930\"}"}
+{"index": 41, "answer": "{\"invoice_number\": \"INV-4206-41\", \"date\": \"August 22, 2024\", \"total\": \"$13,620\"}"}
+{"index": 42, "answer": "{\"invoice_number\": \"INV-4181-42\", \"date\": \"June 11, 2024\", \"total\": \"$11,830\"}"}
+{"index": 43, "answer": "{\"invoice_number\": \"INV-4190-43\", \"date\": \"May 2, 2024\", \"total\": \"$6,130\"}"}
+{"index": 44, "answer": "{\"invoice_number\": \"INV-5016-44\", \"date\": \"April 19, 2024\", \"total\": \"$24,470\"}"}
+{"index": 45, "answer": "{\"invoice_number\": \"INV-1305-45\", \"date\": \"May 2, 2024\", \"total\": \"$25,820\"}"}
+{"index": 46, "answer": "{\"invoice_number\": \"INV-6126-46\", \"date\": \"June 11, 2024\", \"total\": \"$43,240\"}"}
+{"index": 47, "answer": "{\"invoice_number\": \"INV-1781-47\", \"date\": \"April 19, 2024\", \"total\": \"$46,340\"}"}
+{"index": 48, "answer": "{\"invoice_number\": \"INV-5494-48\", \"date\": \"July 5, 2024\", \"total\": \"$27,430\"}"}
+{"index": 49, "answer": "{\"invoice_number\": \"INV-1135-49\", \"date\": \"May 2, 2024\", \"total\": \"$21,720\"}"}
+{"index": 50, "answer": "{\"invoice_number\": \"INV-9155-50\", \"date\": \"June 11, 2024\", \"total\": \"$14,090\"}"}
+{"index": 51, "answer": "{\"invoice_number\": \"INV-6259-51\", \"date\": \"August 22, 2024\", \"total\": \"$12,060\"}"}
+{"index": 52, "answer": "{\"invoice_number\": \"INV-6563-52\", \"date\": \"April 19, 2024\", \"total\": \"$42,170\"}"}
+{"index": 53, "answer": "{\"invoice_number\": \"INV-1625-53\", \"date\": \"July 5, 2024\", \"total\": \"$27,490\"}"}
+{"index": 54, "answer": "{\"invoice_number\": \"INV-9655-54\", \"date\": \"August 22, 2024\", \"total\": \"$40,240\"}"}
+{"index": 55, "answer": "{\"invoice_number\": \"INV-1091-55\", \"date\": \"May 2, 2024\", \"total\": \"$34,510\"}"}
+{"index": 56, "answer": "{\"invoice_number\": \"INV-7535-56\", \"date\": \"July 5, 2024\", \"total\": \"$14,460\"}"}
+{"index": 57, "answer": "{\"invoice_number\": \"INV-4412-57\", \"date\": \"May 2, 2024\", \"total\": \"$5,910\"}"}
+{"index": 58, "answer": "{\"invoice_number\": \"INV-8922-58\", \"date\": \"August 22, 2024\", \"total\": \"$35,540\"}"}
+{"index": 59, "answer": "{\"invoice_number\": \"INV-8470-59\", \"date\": \"June 11, 2024\", \"total\": \"$22,320\"}"}
+{"index": 60, "answer": "{\"invoice_number\": \"INV-6017-60\", \"date\": \"May 2, 2024\", \"total\": \"$32,010\"}"}
+{"index": 61, "answer": "{\"invoice_number\": \"INV-2348-61\", \"date\": \"April 19, 2024\", \"total\": \"$40,750\"}"}
+{"index": 62, "answer": "{\"invoice_number\": \"INV-7515-62\", \"date\": \"August 22, 2024\", \"total\": \"$17,570\"}"}
+{"index": 63, "answer": "{\"invoice_number\": \"INV-3440-63\", \"date\": \"June 11, 2024\", \"total\": \"$20,280\"}"}
+{"index": 64, "answer": "{\"invoice_number\": \"INV-2172-64\", \"date\": \"August 22, 2024\", \"total\": \"$35,830\"}"}
+{"index": 65, "answer": "{\"invoice_number\": \"INV-9574-65\", \"date\": \"May 2, 2024\", \"total\": \"$6,170\"}"}
+{"index": 66, "answer": "{\"invoice_number\": \"INV-1968-66\", \"date\": \"July 5, 2024\", \"total\": \"$31,310\"}"}
+{"index": 67, "answer": "{\"invoice_number\": \"INV-2017-67\", \"date\": \"June 11, 2024\", \"total\": \"$20,040\"}"}
+{"index": 68, "answer": "{\"invoice_number\": \"INV-7672-68\", \"date\": \"April 19, 2024\", \"total\": \"$41,830\"}"}
+{"index": 69, "answer": "{\"invoice_number\": \"INV-7086-69\", \"date\": \"July 5, 2024\", \"total\": \"$27,430\"}"}
+{"index": 70, "answer": "{\"invoice_number\": \"INV-1744-70\", \"date\": \"July 5, 2024\", \"total\": \"$32,640\"}"}
+{"index": 71, "answer": "{\"invoice_number\": \"INV-6370-71\", \"date\": \"April 19, 2024\", \"total\": \"$23,330\"}"}
+{"index": 72, "answer": "{\"invoice_number\": \"INV-3182-72\", \"date\": \"July 5, 2024\", \"total\": \"$10,440\"}"}
+{"index": 73, "answer": "{\"invoice_number\": \"INV-4335-73\", \"date\": \"May 2, 2024\", \"total\": \"$44,370\"}"}
+{"index": 74, "answer": "{\"invoice_number\": \"INV-3599-74\", \"date\": \"April 19, 2024\", \"total\": \"$20,170\"}"}
+{"index": 75, "answer": "{\"invoice_number\": \"INV-6994-75\", \"date\": \"April 19, 2024\", \"total\": \"$16,140\"}"}
+{"index": 76, "answer": "{\"invoice_number\": \"INV-8643-76\", \"date\": \"April 19, 2024\", \"total\": \"$28,220\"}"}
+{"index": 77, "answer": "{\"invoice_number\": \"INV-2382-77\", \"date\": \"April 19, 2024\", \"total\": \"$21,390\"}"}
+{"index": 78, "answer": "{\"invoice_number\": \"INV-8283-78\", \"date\": \"May 2, 2024\", \"total\": \"$26,840\"}"}
+{"index": 79, "answer": "{\"invoice_number\": \"INV-9993-79\", \"date\": \"June 11, 2024\", \"total\": \"$5,440\"}"}
+{"index": 80, "answer": "{\"invoice_number\": \"INV-3045-80\", \"date\": \"April 19, 2024\", \"total\": \"$39,830\"}"}
+{"index": 81, "answer": "{\"invoice_number\": \"INV-3415-81\", \"date\": \"May 2, 2024\", \"total\": \"$4,150\"}"}
+{"index": 82, "answer": "{\"invoice_number\": \"INV-7748-82\", \"date\": \"May 2, 2024\", \"total\": \"$1,380\"}"}
+{"index": 83, "answer": "{\"invoice_number\": \"INV-3474-83\", \"date\": \"April 19, 2024\", \"total\": \"$48,190\"}"}
+{"index": 84, "answer": "{\"invoice_number\": \"INV-6393-84\", \"date\": \"June 11, 2024\", \"total\": \"$9,260\"}"}
+{"index": 85, "answer": "{\"invoice_number\": \"INV-4657-85\", \"date\": \"July 5, 2024\", \"total\": \"$47,910\"}"}
+{"index": 86, "answer": "{\"invoice_number\": \"INV-8985-86\", \"date\": \"August 22, 2024\", \"total\": \"$14,100\"}"}
+{"index": 87, "answer": "{\"invoice_number\": \"INV-3388-87\", \"date\": \"August 22, 2024\", \"total\": \"$41,820\"}"}
+{"index": 88, "answer": "{\"invoice_number\": \"INV-5025-88\", \"date\": \"June 11, 2024\", \"total\": \"$27,060\"}"}
+{"index": 89, "answer": "{\"invoice_number\": \"INV-1074-89\", \"date\": \"May 2, 2024\", \"total\": \"$15,820\"}"}
+{"index": 90, "answer": "{\"invoice_number\": \"INV-2068-90\", \"date\": \"April 19, 2024\", \"total\": \"$10,340\"}"}
+{"index": 91, "answer": "{\"invoice_number\": \"INV-5448-91\", \"date\": \"June 11, 2024\", \"total\": \"$20,830\"}"}
+{"index": 92, "answer": "{\"invoice_number\": \"INV-4764-92\", \"date\": \"June 11, 2024\", \"total\": \"$38,770\"}"}
+{"index": 93, "answer": "{\"invoice_number\": \"INV-7672-93\", \"date\": \"April 19, 2024\", \"total\": \"$40,830\"}"}
+{"index": 94, "answer": "{\"invoice_number\": \"INV-1136-94\", \"date\": \"June 11, 2024\", \"total\": \"$3,420\"}"}
+{"index": 95, "answer": "{\"invoice_number\": \"INV-2995-95\", \"date\": \"July 5, 2024\", \"total\": \"$21,770\"}"}
+{"index": 96, "answer": "{\"invoice_number\": \"INV-8609-96\", \"date\": \"July 5, 2024\", \"total\": \"$28,470\"}"}
+{"index": 97, "answer": "{\"invoice_number\": \"INV-3169-97\", \"date\": \"April 19, 2024\", \"total\": \"$23,460\"}"}
+{"index": 98, "answer": "{\"invoice_number\": \"INV-2679-98\", \"date\": \"May 2, 2024\", \"total\": \"$28,790\"}"}
+{"index": 99, "answer": "{\"invoice_number\": \"INV-3679-99\", \"date\": \"April 19, 2024\", \"total\": \"$45,220\"}"}
+{"index": 100, "answer": "{\"invoice_number\": \"INV-3573-100\", \"date\": \"June 11, 2024\", \"total\": \"$20,770\"}"}
+{"index": 101, "answer": "{\"invoice_number\": \"INV-4346-101\", \"date\": \"May 2, 2024\", \"total\": \"$34,850\"}"}
+{"index": 102, "answer": "{\"invoice_number\": \"INV-6033-102\", \"date\": \"July 5, 2024\", \"total\": \"$14,480\"}"}
+{"index": 103, "answer": "{\"invoice_number\": \"INV-2045-103\", \"date\": \"June 11, 2024\", \"total\": \"$23,090\"}"}
+{"index": 104, "answer": "{\"invoice_number\": \"INV-2922-104\", \"date\": \"May 2, 2024\", \"total\": \"$39,810\"}"}
+{"index": 105, "answer": "{\"invoice_number\": \"INV-9187-105\", \"date\": \"June 11, 2024\", \"total\": \"$32,400\"}"}
+{"index": 106, "answer": "{\"invoice_number\": \"INV-2313-106\", \"date\": \"April 19, 2024\", \"total\": \"$18,170\"}"}
+{"index": 107, "answer": "{\"invoice_number\": \"INV-8898-107\", \"date\": \"June 11, 2024\", \"total\": \"$30,090\"}"}
+{"index": 108, "answer": "{\"invoice_number\": \"INV-2337-108\", \"date\": \"May 2, 2024\", \"total\": \"$9,490\"}"}
+{"index": 109, "answer": "{\"invoice_number\": \"INV-7483-109\", \"date\": \"June 11, 2024\", \"total\": \"$48,610\"}"}
+{"index": 110, "answer": "{\"invoice_number\": \"INV-9929-110\", \"date\": \"July 5, 2024\", \"total\": \"$13,160\"}"}
+{"index": 111, "answer": "{\"invoice_number\": \"INV-3035-111\", \"date\": \"July 5, 2024\", \"total\": \"$22,590\"}"}
+{"index": 112, "answer": "{\"invoice_number\": \"INV-1204-112\", \"date\": \"May 2, 2024\", \"total\": \"$18,920\"}"}
+{"index": 113, "answer": "{\"invoice_number\": \"INV-8563-113\", \"date\": \"April 19, 2024\", \"total\": \"$2,970\"}"}
+{"index": 114, "answer": "{\"invoice_number\": \"INV-8808-114\", \"date\": \"July 5, 2024\", \"total\": \"$44,640\"}"}
+{"index": 115, "answer": "{\"invoice_number\": \"INV-2465-115\", \"date\": \"August 22, 2024\", \"total\": \"$3,420\"}"}
+{"index": 116, "answer": "{\"invoice_number\": \"INV-4699-116\", \"date\": \"June 11, 2024\", \"total\": \"$20,000\"}"}
+{"index": 117, "answer": "{\"invoice_number\": \"INV-2981-117\", \"date\": \"August 22, 2024\", \"total\": \"$36,910\"}"}
+{"index": 118, "answer": "{\"invoice_number\": \"INV-2396-118\", \"date\": \"April 19, 2024\", \"total\": \"$33,470\"}"}
+{"index": 119, "answer": "{\"invoice_number\": \"INV-7025-119\", \"date\": \"April 19, 2024\", \"total\": \"$21,080\"}"}
+{"index": 120, "answer": "{\"invoice_number\": \"INV-3544-120\", \"date\": \"May 2, 2024\", \"total\": \"$45,790\"}"}
+{"index": 121, "answer": "{\"invoice_number\": \"INV-7052-121\", \"date\": \"June 11, 2024\", \"total\": \"$42,700\"}"}
+{"index": 122, "answer": "{\"invoice_number\": \"INV-7534-122\", \"date\": \"April 19, 2024\", \"total\": \"$20,180\"}"}
+{"index": 123, "answer": "{\"invoice_number\": \"INV-8232-123\", \"date\": \"June 11, 2024\", \"total\": \"$38,780\"}"}
+{"index": 124, "answer": "{\"invoice_number\": \"INV-1068-124\", \"date\": \"May 2, 2024\", \"total\": \"$39,670\"}"}
+{"index": 125, "answer": "{\"invoice_number\": \"INV-6912-125\", \"date\": \"May 2, 2024\", \"total\": \"$35,660\"}"}
+{"index": 126, "answer": "{\"invoice_number\": \"INV-6781-126\", \"date\": \"May 2, 2024\", \"total\": \"$19,670\"}"}
+{"index": 127, "answer": "{\"invoice_number\": \"INV-1205-127\", \"date\": \"May 2, 2024\", \"total\": \"$14,640\"}"}
+{"index": 128, "answer": "{\"invoice_number\": \"INV-3965-128\", \"date\": \"July 5, 2024\", \"total\": \"$38,840\"}"}
+{"index": 129, "answer": "{\"invoice_number\": \"INV-7793-129\", \"date\": \"July 5, 2024\", \"total\": \"$5,150\"}"}
+{"index": 130, "answer": "{\"invoice_number\": \"INV-3646-130\", \"date\": \"June 11, 2024\", \"total\": \"$1,410\"}"}
+{"index": 131, "answer": "{\"invoice_number\": \"INV-1494-131\", \"date\": \"May 2, 2024\", \"total\": \"$23,610\"}"}
+{"index": 132, "answer": "{\"invoice_number\": \"INV-5015-132\", \"date\": \"August 22, 2024\", \"total\": \"$19,350\"}"}
+{"index": 133, "answer": "{\"invoice_number\": \"INV-3178-133\", \"date\": \"July 5, 2024\", \"total\": \"$4,420\"}"}
+{"index": 134, "answer": "{\"invoice_number\": \"INV-8768-134\", \"date\": \"May 2, 2024\", \"total\": \"$40,650\"}"}
+{"index": 135, "answer": "{\"invoice_number\": \"INV-4443-135\", \"date\": \"August 22, 2024\", \"total\": \"$31,630\"}"}
+{"index": 136, "answer": "{\"invoice_number\": \"INV-1871-136\", \"date\": \"July 5, 2024\", \"total\": \"$19,440\"}"}
+{"index": 137, "answer": "{\"invoice_number\": \"INV-4793-137\", \"date\": \"August 22, 2024\", \"total\": \"$17,420\"}"}
+{"index": 138, "answer": "{\"invoice_number\": \"INV-5203-138\", \"date\": \"May 2, 2024\", \"total\": \"$15,980\"}"}
+{"index": 139, "answer": "{\"invoice_number\": \"INV-2515-139\", \"date\": \"July 5, 2024\", \"total\": \"$20,990\"}"}
+{"index": 140, "answer": "{\"invoice_number\": \"INV-1952-140\", \"date\": \"June 11, 2024\", \"total\": \"$26,290\"}"}
+{"index": 141, "answer": "{\"invoice_number\": \"INV-7571-141\", \"date\": \"April 19, 2024\", \"total\": \"$45,230\"}"}
+{"index": 142, "answer": "{\"invoice_number\": \"INV-3770-142\", \"date\": \"July 5, 2024\", \"total\": \"$16,060\"}"}
+{"index": 143, "answer": "{\"invoice_number\": \"INV-6828-143\", \"date\": \"May 2, 2024\", \"total\": \"$39,000\"}"}
+{"index": 144, "answer": "{\"invoice_number\": \"INV-8036-144\", \"date\": \"June 11, 2024\", \"total\": \"$39,330\"}"}
+{"index": 145, "answer": "{\"invoice_number\": \"INV-6147-145\", \"date\": \"June 11, 2024\", \"total\": \"$23,650\"}"}
+{"index": 146, "answer": "{\"invoice_number\": \"INV-4430-146\", \"date\": \"June 11, 2024\", \"total\": \"$22,080\"}"}
+{"index": 147, "answer": "{\"invoice_number\": \"INV-9207-147\", \"date\": \"May 2, 2024\", \"total\": \"$26,880\"}"}
+{"index": 148, "answer": "{\"invoice_number\": \"INV-5574-148\", \"date\": \"April 19, 2024\", \"total\": \"$24,040\"}"}
+{"index": 149, "answer": "{\"invoice_number\": \"INV-3718-149\", \"date\": \"June 11, 2024\", \"total\": \"$10,730\"}"}
+{"index": 150, "answer": "{\"invoice_number\": \"INV-6678-150\", \"date\": \"June 11, 2024\", \"total\": \"$19,640\"}"}
+{"index": 151, "answer": "{\"invoice_number\": \"INV-3268-151\", \"date\": \"August 22, 2024\", \"total\": \"$33,800\"}"}
+{"index": 152, "answer": "{\"invoice_number\": \"INV-6540-152\", \"date\": \"July 5, 2024\", \"total\": \"$41,800\"}"}
+{"index": 153, "answer": "{\"invoice_number\": \"INV-3671-153\", \"date\": \"August 22, 2024\", \"total\": \"$39,130\"}"}
+{"index": 154, "answer": "{\"invoice_number\": \"INV-5563-154\", \"date\": \"August 22, 2024\", \"total\": \"$7,040\"}"}
+{"index": 155, "answer": "{\"invoice_number\": \"INV-8006-155\", \"date\": \"April 19, 2024\", \"total\": \"16,380\"}"}
+{"index": 156, "answer": "{\"invoice_number\": \"INV-6630-156\", \"date\": \"June 11, 2024\", \"total\": \"$2,060\"}"}
+{"index": 157, "answer": "{\"invoice_number\": \"INV-9823-157\", \"date\": \"June 11, 2024\", \"total\": \"$20,590\"}"}
+{"index": 158, "answer": "{\"invoice_number\": \"INV-4730-158\", \"date\": \"May 2, 2024\", \"total\": \"$6,860\"}"}
+{"index": 159, "answer": "{\"invoice_number\": \"INV-3099-159\", \"date\": \"August 22, 2024\", \"total\": \"$30,170\"}"}
+{"index": 160, "answer": "{\"invoice_number\": \"INV-4511-160\", \"date\": \"April 19, 2024\", \"total\": \"$40,830\"}"}
+{"index": 161, "answer": "{\"invoice_number\": \"INV-4078-161\", \"date\": \"June 11, 2024\", \"total\": \"$32,320\"}"}
+{"index": 162, "answer": "{\"invoice_number\": \"INV-1415-162\", \"date\": \"May 2, 2024\", \"total\": \"$5,230\"}"}
+{"index": 163, "answer": "{\"invoice_number\": \"INV-3686-163\", \"date\": \"June 11, 2024\", \"total\": \"$9,210\"}"}
+{"index": 164, "answer": "{\"invoice_number\": \"INV-9641-164\", \"date\": \"July 5, 2024\", \"total\": \"$23,330\"}"}
+{"index": 165, "answer": "{\"invoice_number\": \"INV-6487-165\", \"date\": \"June 11, 2024\", \"total\": \"$23,930\"}"}
+{"index": 166, "answer": "{\"invoice_number\": \"INV-3615-166\", \"date\": \"July 5, 2024\", \"total\": \"$36,360\"}"}
+{"index": 167, "answer": "{\"invoice_number\": \"INV-6412-167\", \"date\": \"May 2, 2024\", \"total\": \"$46,940\"}"}
+{"index": 168, "answer": "{\"invoice_number\": \"INV-4793-168\", \"date\": \"April 19, 2024\", \"total\": \"$37,760\"}"}
+{"index": 169, "answer": "{\"invoice_number\": \"INV-7625-169\", \"date\": \"August 22, 2024\", \"total\": \"$6,690\"}"}
+{"index": 170, "answer": "{\"invoice_number\": \"INV-5617-170\", \"date\": \"August 22, 2024\", \"total\": \"$45,040\"}"}
+{"index": 171, "answer": "{\"invoice_number\": \"INV-2747-171\", \"date\": \"April 19, 2024\", \"total\": \"$9,610\"}"}
+{"index": 172, "answer": "{\"invoice_number\": \"INV-7536-172\", \"date\": \"August 22, 2024\", \"total\": \"$46,120\"}"}
+{"index": 173, "answer": "{\"invoice_number\": \"INV-5375-173\", \"date\": \"May 2, 2024\", \"total\": \"$28,450\"}"}
+{"index": 174, "answer": "{\"invoice_number\": \"INV-9403-174\", \"date\": \"July 5, 2024\", \"total\": \"$12,400\"}"}
+{"index": 175, "answer": "{\"invoice_number\": \"INV-8468-175\", \"date\": \"August 22, 2024\", \"total\": \"$39,090\"}"}
+{"index": 176, "answer": "{\"invoice_number\": \"INV-4985-176\", \"date\": \"July 5, 2024\", \"total\": \"$41,030\"}"}
+{"index": 177, "answer": "{\"invoice_number\": \"INV-1750-177\", \"date\": \"August 22, 2024\", \"total\": \"$40,800\"}"}
+{"index": 178, "answer": "{\"invoice_number\": \"INV-1784-178\", \"date\": \"May 2, 2024\", \"total\": \"$20,100\"}"}
+{"index": 179, "answer": "{\"invoice_number\": \"INV-3036-179\", \"date\": \"May 2, 2024\", \"total\": \"$5,260\"}"}
+{"index": 180, "answer": "{\"invoice_number\": \"INV-6459-180\", \"date\": \"May 2, 2024\", \"total\": \"$23,670\"}"}
+{"index": 181, "answer": "{\"invoice_number\": \"INV-1928-181\", \"date\": \"July 5, 2024\", \"total\": \"$34,640\"}"}
+{"index": 182, "answer": "{\"invoice_number\": \"INV-1454-182\", \"date\": \"August 22, 2024\", \"total\": \"$3,350\"}"}
+{"index": 183, "answer": "{\"invoice_number\": \"INV-1087-183\", \"date\": \"July 5, 2024\", \"total\": \"$21,990\"}"}
+{"index": 184, "answer": "{\"invoice_number\": \"INV-5651-184\", \"date\": \"April 19, 2024\", \"total\": \"$40,460\"}"}
+{"index": 185, "answer": "{\"invoice_number\": \"INV-9146-185\", \"date\": \"April 19, 2024\", \"total\": \"$2,010\"}"}
+{"index": 186, "answer": "{\"invoice_number\": \"INV-2659-186\", \"date\": \"June 11, 2024\", \"total\": \"$19,610\"}"}
+{"index": 187, "answer": "{\"invoice_number\": \"INV-4220-187\", \"date\": \"July 5, 2024\", \"total\": \"$38,830\"}"}
+{"index": 188, "answer": "{\"invoice_number\": \"INV-4178-188\", \"date\": \"July 5, 2024\", \"total\": \"$24,660\"}"}
+{"index": 189, "answer": "{\"invoice_number\": \"INV-3453-189\", \"date\": \"August 22, 2024\", \"total\": \"$37,500\"}"}
+{"index": 190, "answer": "{\"invoice_number\": \"INV-8379-190\", \"date\": \"June 11, 2024\", \"total\": \"$37,380\"}"}
+{"index": 191, "answer": "{\"invoice_number\": \"INV-6684-191\", \"date\": \"June 11, 2024\", \"total\": \"$35,400\"}"}
+{"index": 192, "answer": "{\"invoice_number\": \"INV-7991-192\", \"date\": \"July 5, 2024\", \"total\": \"$44,180\"}"}
+{"index": 193, "answer": "{\"invoice_number\": \"INV-7202-193\", \"date\": \"July 5, 2024\", \"total\": \"$12,390\"}"}
+{"index": 194, "answer": "{\"invoice_number\": \"INV-8500-194\", \"date\": \"April 19, 2024\", \"total\": \"$46,810\"}"}
+{"index": 195, "answer": "{\"invoice_number\": \"INV-4744-195\", \"date\": \"August 22, 2024\", \"total\": \"$10,460\"}"}
+{"index": 196, "answer": "{\"invoice_number\": \"INV-9568-196\", \"date\": \"July 5, 2024\", \"total\": \"$39,930\"}"}
+{"index": 197, "answer": "{\"invoice_number\": \"INV-9890-197\", \"date\": \"July 5, 2024\", \"total\": \"$42,310\"}"}
+{"index": 198, "answer": "{\"invoice_number\": \"INV-7181-198\", \"date\": \"June 11, 2024\", \"total\": \"$1,540\"}"}
+{"index": 199, "answer": "{\"invoice_number\": \"INV-8400-199\", \"date\": \"July 5, 2024\", \"total\": \"$14,190\"}"}
+{"index": 200, "answer": "{\"invoice_number\": \"INV-2060-200\", \"date\": \"June 11, 2024\", \"total\": \"$6,270\"}"}
+{"index": 201, "answer": "{\"invoice_number\": \"INV-2074-201\", \"date\": \"August 22, 2024\", \"total\": \"$9,510\"}"}
+{"index": 202, "answer": "{\"invoice_number\": \"INV-5695-202\", \"date\": \"April 19, 2024\", \"total\": \"$26,590\"}"}
+{"index": 203, "answer": "{\"invoice_number\": \"INV-6328-203\", \"date\": \"April 19, 2024\", \"total\": \"$44,640\"}"}
+{"index": 204, "answer": "{\"invoice_number\": \"INV-1939-204\", \"date\": \"May 2, 2024\", \"total\": \"$38,630\"}"}
+{"index": 205, "answer": "{\"invoice_number\": \"INV-5405-205\", \"date\": \"April 19, 2024\", \"total\": \"$15,040\"}"}
+{"index": 206, "answer": "{\"invoice_number\": \"INV-2506-206\", \"date\": \"April 19, 2024\", \"total\": \"$2,490\"}"}
+{"index": 207, "answer": "{\"invoice_number\": \"INV-2420-207\", \"date\": \"June 11, 2024\", \"total\": \"$41,310\"}"}
+{"index": 208, "answer": "{\"invoice_number\": \"INV-8137-208\", \"date\": \"May 2, 2024\", \"total\": \"$32,060\"}"}
+{"index": 209, "answer": "{\"invoice_number\": \"INV-2487-209\", \"date\": \"June 11, 2024\", \"total\": \"$47,300\"}"}
+{"index": 210, "answer": "{\"invoice_number\": \"INV-7557-210\", \"date\": \"May 2, 2024\", \"total\": \"$19,290\"}"}
+{"index": 211, "answer": "{\"invoice_number\": \"INV-1833-211\", \"date\": \"June 11, 2024\", \"total\": \"$14,800\"}"}
+{"index": 212, "answer": "{\"invoice_number\": \"INV-6411-212\", \"date\": \"August 22, 2024\", \"total\": \"$21,670\"}"}
+{"index": 213, "answer": "{\"invoice_number\": \"INV-4417-213\", \"date\": \"July 5, 2024\", \"total\": \"$13,690\"}"}
+{"index": 214, "answer": "{\"invoice_number\": \"INV-5979-214\", \"date\": \"July 5, 2024\", \"total\": \"$5,650\"}"}
+{"index": 215, "answer": "{\"invoice_number\": \"INV-2180-215\", \"date\": \"April 19, 2024\", \"total\": \"$45,560\"}"}
+{"index": 216, "answer": "{\"invoice_number\": \"INV-3480-216\", \"date\": \"July 5, 2024\", \"total\": \"$18,900\"}"}
+{"index": 217, "answer": "{\"invoice_number\": \"INV-3016-217\", \"date\": \"June 11, 2024\", \"total\": \"$43,780\"}"}
+{"index": 218, "answer": "{\"invoice_number\": \"INV-4316-218\", \"date\": \"June 11, 2024\", \"total\": \"$38,380\"}"}
+{"index": 219, "answer": "{\"invoice_number\": \"INV-8313-219\", \"date\": \"August 22, 2024\", \"total\": \"$7,810\"}"}
+{"index": 220, "answer": "{\"invoice_number\": \"INV-2432-220\", \"date\": \"July 5, 2024\", \"total\": \"$8,650\"}"}
+{"index": 221, "answer": "{\"invoice_number\": \"INV-1599-221\", \"date\": \"May 2, 2024\", \"total\": \"$2,330\"}"}
+{"index": 222, "answer": "{\"invoice_number\": \"INV-7969-222\", \"date\": \"August 22, 2024\", \"total\": \"$30,430\"}"}
+{"index": 223, "answer": "{\"invoice_number\": \"INV-5671-223\", \"date\": \"August 22, 2024\", \"total\": \"$21,150\"}"}
+{"index": 224, "answer": "{\"invoice_number\": \"INV-5214-224\", \"date\": \"August 22, 2024\", \"total\": \"$33,880\"}"}
+{"index": 225, "answer": "{\"invoice_number\": \"INV-7360-225\", \"date\": \"May 2, 2024\", \"total\": \"$44,740\"}"}
+{"index": 226, "answer": "{\"invoice_number\": \"INV-3440-226\", \"date\": \"May 2, 2024\", \"total\": \"$22,260\"}"}
+{"index": 227, "answer": "{\"invoice_number\": \"INV-5883-227\", \"date\": \"April 19, 2024\", \"total\": \"$15,590\"}"}
+{"index": 228, "answer": "{\"invoice_number\": \"INV-4094-228\", \"date\": \"June 11, 2024\", \"total\": \"$15,070\"}"}
+{"index": 229, "answer": "{\"invoice_number\": \"INV-8280-229\", \"date\": \"May 2, 2024\", \"total\": \"$9,460\"}"}
+{"index": 230, "answer": "{\"invoice_number\": \"INV-4617-230\", \"date\": \"June 11, 2024\", \"total\": \"$23,500\"}"}
+{"index": 231, "answer": "{\"invoice_number\": \"INV-2166-231\", \"date\": \"May 2, 2024\", \"total\": \"$14,360\"}"}
+{"index": 232, "answer": "{\"invoice_number\": \"INV-4235-232\", \"date\": \"June 11, 2024\", \"total\": \"$40,300\"}"}
+{"index": 233, "answer": "{\"invoice_number\": \"INV-3626-233\", \"date\": \"May 2, 2024\", \"total\": \"$31,720\"}"}
+{"index": 234, "answer": "{\"invoice_number\": \"INV-4407-234\", \"date\": \"May 2, 2024\", \"total\": \"$11,720\"}"}
+{"index": 235, "answer": "{\"invoice_number\": \"INV-3217-235\", \"date\": \"August 22, 2024\", \"total\": \"$6,380\"}"}
+{"index": 236, "answer": "{\"invoice_number\": \"INV-1711-236\", \"date\": \"August 22, 2024\", \"total\": \"$11,840\"}"}
+{"index": 237, "answer": "{\"invoice_number\": \"INV-4831-237\", \"date\": \"August 22, 2024\", \"total\": \"$5,940\"}"}
+{"index": 238, "answer": "{\"invoice_number\": \"INV-9827-238\", \"date\": \"April 19, 2024\", \"total\": \"$19,610\"}"}
+{"index": 239, "answer": "{\"invoice_number\": \"INV-3373-239\", \"date\": \"April 19, 2024\", \"total\": \"$34,730\"}"}
+{"index": 240, "answer": "{\"invoice_number\": \"INV-6004-240\", \"date\": \"August 22, 2024\", \"total\": \"$31,720\"}"}
+{"index": 241, "answer": "{\"invoice_number\": \"INV-6378-241\", \"date\": \"June 11, 2024\", \"total\": \"$19,860\"}"}
+{"index": 242, "answer": "{\"invoice_number\": \"INV-4247-242\", \"date\": \"June 11, 2024\", \"total\": \"$3,870\"}"}
+{"index": 243, "answer": "{\"invoice_number\": \"INV-4035-243\", \"date\": \"May 2, 2024\", \"total\": \"$45,320\"}"}
+{"index": 244, "answer": "{\"invoice_number\": \"INV-7904-244\", \"date\": \"August 22, 2024\", \"total\": \"$44,220\"}"}
+{"index": 245, "answer": "{\"invoice_number\": \"INV-2576-245\", \"date\": \"July 5, 2024\", \"total\": \"$22,750\"}"}
+{"index": 246, "answer": "{\"invoice_number\": \"INV-7783-246\", \"date\": \"August 22, 2024\", \"total\": \"$42,880\"}"}
+{"index": 247, "answer": "{\"invoice_number\": \"INV-6917-247\", \"date\": \"August 22, 2024\", \"total\": \"$45,750\"}"}
+{"index": 248, "answer": "{\"invoice_number\": \"INV-6401-248\", \"date\": \"July 5, 2024\", \"total\": \"$35,260\"}"}
+{"index": 249, "answer": "{\"invoice_number\": \"INV-3449-249\", \"date\": \"July 5, 2024\", \"total\": \"18,170\"}"}
+{"index": 250, "answer": "{\"invoice_number\": \"INV-5001-250\", \"date\": \"June 11, 2024\", \"total\": \"$8,180\"}"}
+{"index": 251, "answer": "{\"invoice_number\": \"INV-3503-251\", \"date\": \"April 19, 2024\", \"total\": \"$43,760\"}"}
+{"index": 252, "answer": "{\"invoice_number\": \"INV-8198-252\", \"date\": \"June 11, 2024\", \"total\": \"$28,250\"}"}
+{"index": 253, "answer": "{\"invoice_number\": \"INV-5411-253\", \"date\": \"July 5, 2024\", \"total\": \"$5,420\"}"}
+{"index": 254, "answer": "{\"invoice_number\": \"INV-2967-254\", \"date\": \"April 19, 2024\", \"total\": \"$2,670\"}"}
+{"index": 255, "answer": "{\"invoice_number\": \"INV-9186-255\", \"date\": \"August 22, 2024\", \"total\": \"$16,880\"}"}
+{"index": 256, "answer": "{\"invoice_number\": \"INV-2751-256\", \"date\": \"April 19, 2024\", \"total\": \"$4,270\"}"}
+{"index": 257, "answer": "{\"invoice_number\": \"INV-2308-257\", \"date\": \"April 19, 2024\", \"total\": \"$5,980\"}"}
+{"index": 258, "answer": "{\"invoice_number\": \"INV-3566-258\", \"date\": \"April 19, 2024\", \"total\": \"$17,780\"}"}
+{"index": 259, "answer": "{\"invoice_number\": \"INV-9639-259\", \"date\": \"May 2, 2024\", \"total\": \"$39,320\"}"}
+{"index": 260, "answer": "{\"invoice_number\": \"INV-4874-260\", \"date\": \"April 19, 2024\", \"total\": \"$47,160\"}"}
+{"index": 261, "answer": "{\"invoice_number\": \"INV-7440-261\", \"date\": \"May 2, 2024\", \"total\": \"$32,300\"}"}
+{"index": 262, "answer": "{\"invoice_number\": \"INV-7769-262\", \"date\": \"July 5, 2024\", \"total\": \"$33,770\"}"}
+{"index": 263, "answer": "{\"invoice_number\": \"INV-5877-263\", \"date\": \"May 2, 2024\", \"total\": \"$33,690\"}"}
+{"index": 264, "answer": "{\"invoice_number\": \"INV-9098-264\", \"date\": \"May 2, 2024\", \"total\": \"$34,120\"}"}
+{"index": 265, "answer": "{\"invoice_number\": \"INV-2586-265\", \"date\": \"April 19, 2024\", \"total\": \"$46,460\"}"}
+{"index": 266, "answer": "{\"invoice_number\": \"INV-7585-266\", \"date\": \"August 22, 2024\", \"total\": \"$44,620\"}"}
+{"index": 267, "answer": "{\"invoice_number\": \"INV-5059-267\", \"date\": \"June 11, 2024\", \"total\": \"$11,370\"}"}
+{"index": 268, "answer": "{\"invoice_number\": \"INV-9003-268\", \"date\": \"April 19, 2024\", \"total\": \"$20,140\"}"}
+{"index": 269, "answer": "{\"invoice_number\": \"INV-5706-269\", \"date\": \"June 11, 2024\", \"total\": \"$13,530\"}"}
+{"index": 270, "answer": "{\"invoice_number\": \"INV-9307-270\", \"date\": \"July 5, 2024\", \"total\": \"$21,780\"}"}
+{"index": 271, "answer": "{\"invoice_number\": \"INV-4532-271\", \"date\": \"August 22, 2024\", \"total\": \"$8,560\"}"}
+{"index": 272, "answer": "{\"invoice_number\": \"INV-6301-272\", \"date\": \"June 11, 2024\", \"total\": \"$5,330\"}"}
+{"index": 273, "answer": "{\"invoice_number\": \"INV-7348-273\", \"date\": \"June 11, 2024\", \"total\": \"$41,440\"}"}
+{"index": 274, "answer": "{\"invoice_number\": \"INV-9724-274\", \"date\": \"April 19, 2024\", \"total\": \"$29,580\"}"}
+{"index": 275, "answer": "{\"invoice_number\": \"INV-2632-275\", \"date\": \"July 5, 2024\", \"total\": \"$36,980\"}"}
+{"index": 276, "answer": "{\"invoice_number\": \"INV-8969-276\", \"date\": \"May 2, 2024\", \"total\": \"$35,260\"}"}
+{"index": 277, "answer": "{\"invoice_number\": \"INV-8998-277\", \"date\": \"August 22, 2024\", \"total\": \"$9,370\"}"}
+{"index": 278, "answer": "{\"invoice_number\": \"INV-9455-278\", \"date\": \"June 11, 2024\", \"total\": \"$37,320\"}"}
+{"index": 279, "answer": "{\"invoice_number\": \"INV-7667-279\", \"date\": \"July 5, 2024\", \"total\": \"$32,930\"}"}
+{"index": 280, "answer": "{\"invoice_number\": \"INV-7629-280\", \"date\": \"May 2, 2024\", \"total\": \"$36,480\"}"}
+{"index": 281, "answer": "{\"invoice_number\": \"INV-7843-281\", \"date\": \"April 19, 2024\", \"total\": \"$35,830\"}"}
+{"index": 282, "answer": "{\"invoice_number\": \"INV-1089-282\", \"date\": \"April 19, 2024\", \"total\": \"$30,760\"}"}
+{"index": 283, "answer": "{\"invoice_number\": \"INV-7229-283\", \"date\": \"July 5, 2024\", \"total\": \"$26,640\"}"}
+{"index": 284, "answer": "{\"invoice_number\": \"INV-5582-284\", \"date\": \"May 2, 2024\", \"total\": \"$23,560\"}"}
+{"index": 285, "answer": "{\"invoice_number\": \"INV-4263-285\", \"date\": \"June 11, 2024\", \"total\": \"$29,730\"}"}
+{"index": 286, "answer": "{\"invoice_number\": \"INV-7337-286\", \"date\": \"May 2, 2024\", \"total\": \"$17,170\"}"}
+{"index": 287, "answer": "{\"invoice_number\": \"INV-5834-287\", \"date\": \"June 11, 2024\", \"total\": \"$43,800\"}"}
+{"index": 288, "answer": "{\"invoice_number\": \"INV-9619-288\", \"date\": \"April 19, 2024\", \"total\": \"$25,810\"}"}
+{"index": 289, "answer": "{\"invoice_number\": \"INV-9511-289\", \"date\": \"August 22, 2024\", \"total\": \"$3,950\"}"}
+{"index": 290, "answer": "{\"invoice_number\": \"INV-4398-290\", \"date\": \"July 5, 2024\", \"total\": \"$30,960\"}"}
+{"index": 291, "answer": "{\"invoice_number\": \"INV-2316-291\", \"date\": \"August 22, 2024\", \"total\": \"$43,730\"}"}
+{"index": 292, "answer": "{\"invoice_number\": \"INV-1216-292\", \"date\": \"April 19, 2024\", \"total\": \"$37,470\"}"}
+{"index": 293, "answer": "{\"invoice_number\": \"INV-8289-293\", \"date\": \"June 11, 2024\", \"total\": \"$11,490\"}"}
+{"index": 294, "answer": "{\"invoice_number\": \"INV-3663-294\", \"date\": \"August 22, 2024\", \"total\": \"$9,260\"}"}
+{"index": 295, "answer": "{\"invoice_number\": \"INV-1087-295\", \"date\": \"June 11, 2024\", \"total\": \"$9,430\"}"}
+{"index": 296, "answer": "{\"invoice_number\": \"INV-5327-296\", \"date\": \"May 2, 2024\", \"total\": \"$23,470\"}"}
+{"index": 297, "answer": "{\"invoice_number\": \"INV-3508-297\", \"date\": \"June 11, 2024\", \"total\": \"$13,520\"}"}
+{"index": 298, "answer": "{\"invoice_number\": \"INV-8758-298\", \"date\": \"August 22, 2024\", \"total\": \"$47,980\"}"}
+{"index": 299, "answer": "{\"invoice_number\": \"INV-2937-299\", \"date\": \"April 19, 2024\", \"total\": \"$5,170\"}"}
+{"index": 300, "answer": "{\"invoice_number\": \"INV-6176-300\", \"date\": \"August 22, 2024\", \"total\": \"16,010\"}"}
+{"index": 301, "answer": "{\"invoice_number\": \"INV-8339-301\", \"date\": \"April 19, 2024\", \"total\": \"$15,630\"}"}
+{"index": 302, "answer": "{\"invoice_number\": \"INV-9565-302\", \"date\": \"July 5, 2024\", \"total\": \"$44,380\"}"}
+{"index": 303, "answer": "{\"invoice_number\": \"INV-4153-303\", \"date\": \"July 5, 2024\", \"total\": \"$39,470\"}"}
+{"index": 304, "answer": "{\"invoice_number\": \"INV-1100-304\", \"date\": \"August 22, 2024\", \"total\": \"$40,340\"}"}
+{"index": 305, "answer": "{\"invoice_number\": \"INV-4121-305\", \"date\": \"August 22, 2024\", \"total\": \"$17,060\"}"}
+{"index": 306, "answer": "{\"invoice_number\": \"INV-5416-306\", \"date\": \"May 2, 2024\", \"total\": \"$37,270\"}"}
+{"index": 307, "answer": "{\"invoice_number\": \"INV-4948-307\", \"date\": \"June 11, 2024\", \"total\": \"$15,140\"}"}
+{"index": 308, "answer": "{\"invoice_number\": \"INV-8573-308\", \"date\": \"June 11, 2024\", \"total\": \"$20,510\"}"}
+{"index": 309, "answer": "{\"invoice_number\": \"INV-5820-309\", \"date\": \"April 19, 2024\", \"total\": \"$43,330\"}"}
+{"index": 310, "answer": "{\"invoice_number\": \"INV-3894-310\", \"date\": \"April 19, 2024\", \"total\": \"$31,050\"}"}
+{"index": 311, "answer": "{\"invoice_number\": \"INV-8322-311\", \"date\": \"May 2, 2024\", \"total\": \"$6,300\"}"}
+{"index": 312, "answer": "{\"invoice_number\": \"INV-8756-312\", \"date\": \"June 11, 2024\", \"total\": \"$14,550\"}"}
+{"index": 313, "answer": "{\"invoice_number\": \"INV-7461-313\", \"date\": \"May 2, 2024\", \"total\": \"$25,420\"}"}
+{"index": 314, "answer": "{\"invoice_number\": \"INV-9928-314\", \"date\": \"May 2, 2024\", \"total\": \"$6,640\"}"}
+{"index": 315, "answer": "{\"invoice_number\": \"INV-7800-315\", \"date\": \"April 19, 2024\", \"total\": \"$5,760\"}"}
+{"index": 316, "answer": "{\"invoice_number\": \"110\", \"date\": \"FEB 11 2020\", \"total\": \"1574\"}"}
+{"index": 317, "answer": "{\"invoice_number\": \"94730\", \"date\": \"Feb 16, 2023\", \"total\": \"$93.00\"}"}
+{"index": 318, "answer": "{\"invoice_number\": \"15001300\", \"date\": \"02/18/2014\", \"total\": \"327,08\"}"}
+{"index": 319, "answer": "{\"invoice_number\": \"96430839\", \"date\": \"01/13/2019\", \"total\": \"4958.16\"}"}
+{"index": 320, "answer": "{\"invoice_number\": \"37877758\", \"date\": \"07/02/2014\", \"total\": \"47320,32\"}"}
+{"index": 321, "answer": "{\"invoice_number\": \"33102457\", \"date\": \"09/18/2018\", \"total\": \"18281.24\"}"}
+{"index": 322, "answer": "{\"invoice_number\": \"65028137\", \"date\": \"01/03/2014\", \"total\": \"98,95\"}"}
+{"index": 323, "answer": "{\"invoice_number\": \"22083742\", \"date\": \"03/01/2014\", \"total\": \"792000\"}"}
+{"index": 324, "answer": "{\"invoice_number\": \"22083742\", \"date\": \"03/01/2014\", \"total\": \"792000\"}"}
+{"index": 325, "answer": "{\"invoice_number\": \"23569804\", \"date\": \"04/04/2018\", \"total\": \"274082\"}"}
+{"index": 326, "answer": "{\"invoice_number\": \"51295021\", \"date\": \"01/05/2017\", \"total\": \"9 256,59\"}"}
+{"index": 327, "answer": "{\"invoice_number\": \"44848471\", \"date\": \"03/26/2021\", \"total\": \"838,68\"}"}
+{"index": 328, "answer": "{\"invoice_number\": \"683485\", \"date\": \"Aug. 3, 2023\", \"total\": \"$1904\"}"}
+{"index": 329, "answer": "{\"invoice_number\": \"32830026\", \"date\": \"12/20/2014\", \"total\": \"1140,24\"}"}
+{"index": 330, "answer": "{\"invoice_number\": \"54661411\", \"date\": \"07/29/2020\", \"total\": \"7920.58\"}"}
+{"index": 331, "answer": "{\"invoice_number\": \"58379529\", \"date\": \"05/31/2011\", \"total\": \"2934.70\"}"}
+{"index": 332, "answer": "{\"invoice_number\": \"20434959\", \"date\": \"12/20/2011\", \"total\": \"29,67\"}"}
+{"index": 333, "answer": "{\"invoice_number\": \"10942693\", \"date\": \"06/13/2018\", \"total\": \"21 151,66\"}"}
+{"index": 334, "answer": "{\"invoice_number\": \"97388190\", \"date\": \"12/13/2016\", \"total\": \"329,84\"}"}
+{"index": 335, "answer": "{\"invoice_number\": \"60456703\", \"date\": \"09/01/2016\", \"total\": \"373,98\"}"}
+{"index": 336, "answer": "{\"invoice_number\": \"78605417\", \"date\": \"08/07/2017\", \"total\": \"722,11\"}"}
+{"index": 337, "answer": "{\"invoice_number\": \"121\", \"date\": \"March 12, 2022\", \"total\": \"929.30\"}"}
+{"index": 338, "answer": "{\"invoice_number\": \"94786467\", \"date\": \"11/19/2013\", \"total\": \"847908\"}"}
+{"index": 339, "answer": "{\"invoice_number\": \"93632\", \"date\": \"Mar 22,2023\", \"total\": \"108.72\"}"}
+{"index": 340, "answer": "{\"invoice_number\": \"61669642\", \"date\": \"11/12/2013\", \"total\": \"151,38\"}"}
+{"index": 341, "answer": "{\"invoice_number\": \"37060863\", \"date\": \"01/30/2021\", \"total\": \"2022,82\"}"}
+{"index": 342, "answer": "{\"invoice_number\": \"35593328\", \"date\": \"06/08/2011\", \"total\": \"3 004,96\"}"}
+{"index": 343, "answer": "{\"invoice_number\": \"35593328\", \"date\": \"06/08/2011\", \"total\": \"3 004,96\"}"}
+{"index": 344, "answer": "{\"invoice_number\": \"74980573\", \"date\": \"09/27/2015\", \"total\": \"191,26\"}"}
+{"index": 345, "answer": "{\"invoice_number\": \"69875170\", \"date\": \"07/18/2014\", \"total\": \"194521.70\"}"}
+{"index": 346, "answer": "{\"invoice_number\": \"86736203\", \"date\": \"05/20/2013\", \"total\": \"15 574,11\"}"}
+{"index": 347, "answer": "{\"invoice_number\": \"37107781\", \"date\": \"07/29/2012\", \"total\": \"280492\"}"}
+{"index": 348, "answer": "{\"invoice_number\": \"12323459\", \"date\": \"08/04/2013\", \"total\": \"81,68\"}"}
+{"index": 349, "answer": "{\"invoice_number\": \"121\", \"date\": \"March 12, 2022\", \"total\": \"929.30\"}"}
+{"index": 350, "answer": "{\"invoice_number\": \"85210\", \"date\": \"Mar 09,2023\", \"total\": \"$97.00\"}"}
+{"index": 351, "answer": "{\"invoice_number\": \"34967709\", \"date\": \"01/16/2018\", \"total\": \"50,00\"}"}
+{"index": 352, "answer": "{\"invoice_number\": \"76778037\", \"date\": \"03/15/2021\", \"total\": \"759,03\"}"}
+{"index": 353, "answer": "{\"invoice_number\": \"24342647\", \"date\": \"05/07/2020\", \"total\": \"4524,28\"}"}
+{"index": 354, "answer": "{\"invoice_number\": \"96947403\", \"date\": \"10/09/2011\", \"total\": \"529,78\"}"}
+{"index": 355, "answer": "{\"invoice_number\": \"96947403\", \"date\": \"10/09/2011\", \"total\": \"529,78\"}"}
+{"index": 356, "answer": "{\"invoice_number\": \"26700559\", \"date\": \"01/11/2018\", \"total\": \"342,87\"}"}
+{"index": 357, "answer": "{\"invoice_number\": \"53553822\", \"date\": \"07/24/2012\", \"total\": \"25738.94\"}"}
+{"index": 358, "answer": "{\"invoice_number\": \"70284416\", \"date\": \"04/15/2012\", \"total\": \"32,97\"}"}
+{"index": 359, "answer": "{\"invoice_number\": \"88834769\", \"date\": \"08/18/2011\", \"total\": \"37,38\"}"}
+{"index": 360, "answer": "{\"invoice_number\": \"40394912\", \"date\": \"03/23/2020\", \"total\": \"136950\"}"}
+{"index": 361, "answer": "{\"invoice_number\": \"85210\", \"date\": \"Mar 09,2023\", \"total\": \"$97.00\"}"}
+{"index": 362, "answer": "{\"invoice_number\": \"780841\", \"date\": \"Aug. 17, 2023\", \"total\": \"$2666\"}"}
+{"index": 363, "answer": "{\"invoice_number\": \"40394912\", \"date\": \"03/23/2020\", \"total\": \"136950\"}"}
+{"index": 364, "answer": "{\"invoice_number\": \"99096943\", \"date\": \"10/08/2018\", \"total\": \"231,39\"}"}
+{"index": 365, "answer": "{\"invoice_number\": \"72744145\", \"date\": \"03/29/2016\", \"total\": \"3 085,50\"}"}
+{"index": 366, "answer": "{\"invoice_number\": \"43551281\", \"date\": \"11/02/2014\", \"total\": \"208923\"}"}
+{"index": 367, "answer": "{\"invoice_number\": \"12222347\", \"date\": \"03/18/2017\", \"total\": \"136,13\"}"}
+{"index": 368, "answer": "{\"invoice_number\": \"26388025\", \"date\": \"09/01/2018\", \"total\": \"20,72\"}"}
+{"index": 369, "answer": "{\"invoice_number\": \"13044521\", \"date\": \"01/02/2013\", \"total\": \"53078,96\"}"}
+{"index": 370, "answer": "{\"invoice_number\": \"10457894\", \"date\": \"08/21/2012\", \"total\": \"215,04\"}"}
+{"index": 371, "answer": "{\"invoice_number\": \"59336079\", \"date\": \"01/09/2012\", \"total\": \"2,19\"}"}
+{"index": 372, "answer": "{\"invoice_number\": \"81536\", \"date\": \"Mar 20,2023\", \"total\": \"124.72\"}"}
+{"index": 373, "answer": "{\"invoice_number\": \"94292113\", \"date\": \"06/06/2016\", \"total\": \"962,46\"}"}
+{"index": 374, "answer": "{\"invoice_number\": \"720907\", \"date\": \"Aug. 16, 2023\", \"total\": \"$734\"}"}
+{"index": 375, "answer": "{\"invoice_number\": \"91484809\", \"date\": \"04/05/2013\", \"total\": \"8149241\"}"}
+{"index": 376, "answer": "{\"invoice_number\": \"51265939\", \"date\": \"11/16/2016\", \"total\": \"5906,47\"}"}
+{"index": 377, "answer": "{\"invoice_number\": \"51265939\", \"date\": \"11/16/2016\", \"total\": \"5906,47\"}"}
+{"index": 378, "answer": "{\"invoice_number\": \"43883632\", \"date\": \"06/20/2020\", \"total\": \"330,00\"}"}
+{"index": 379, "answer": "{\"invoice_number\": \"65095335\", \"date\": \"02/15/2017\", \"total\": \"46910,41\"}"}
+{"index": 380, "answer": "{\"invoice_number\": \"14361748\", \"date\": \"09/09/2018\", \"total\": \"412,36\"}"}
+{"index": 381, "answer": "{\"invoice_number\": \"16692901\", \"date\": \"04/03/2018\", \"total\": \"79,13\"}"}
+{"index": 382, "answer": "{\"invoice_number\": \"78962884\", \"date\": \"01/03/2019\", \"total\": \"409,05\"}"}
+{"index": 383, "answer": "{\"invoice_number\": \"98473\", \"date\": \"Mar 04,2023\", \"total\": \"109.00\"}"}
+{"index": 384, "answer": "{\"invoice_number\": \"27216737\", \"date\": \"05/23/2018\", \"total\": \"18561.36\"}"}
+{"index": 385, "answer": "{\"invoice_number\": \"80797635\", \"date\": \"11/22/2014\", \"total\": \"557,40\"}"}
+{"index": 386, "answer": "{\"invoice_number\": \"499434\", \"date\": \"Aug. 1, 2023\", \"total\": \"$150}"}
+{"index": 387, "answer": "{\"invoice_number\": \"76658127\", \"date\": \"10/23/2011\", \"total\": \"628,00\"}"}
+{"index": 388, "answer": "{\"invoice_number\": \"76658127\", \"date\": \"10/23/2011\", \"total\": \"628,00\"}"}
+{"index": 389, "answer": "{\"invoice_number\": \"59326638\", \"date\": \"05/27/2013\", \"total\": \"158,38\"}"}
+{"index": 390, "answer": "{\"invoice_number\": \"74724200\", \"date\": \"02/15/2016\", \"total\": \"242,70\"}"}
+{"index": 391, "answer": "{\"invoice_number\": \"64281058\", \"date\": \"11/08/2019\", \"total\": \"1541649\"}"}
+{"index": 392, "answer": "{\"invoice_number\": \"28935386\", \"date\": \"02/25/2017\", \"total\": \"3 157,01\"}"}
+{"index": 393, "answer": "{\"invoice_number\": \"79587541\", \"date\": \"08/02/2014\", \"total\": \"10,99\"}"}
+{"index": 394, "answer": "{\"invoice_number\": \"136\", \"date\": \"March 8 2020\", \"total\": \"891\"}"}
+{"index": 395, "answer": "{\"invoice_number\": \"29593215\", \"date\": \"11/20/2017\", \"total\": \"462,97\"}"}
+{"index": 396, "answer": "{\"invoice_number\": \"29593215\", \"date\": \"11/20/2017\", \"total\": \"462,97\"}"}
+{"index": 397, "answer": "{\"invoice_number\": \"61264237\", \"date\": \"10/25/2020\", \"total\": \"288,15\"}"}
+{"index": 398, "answer": "{\"invoice_number\": \"255034\", \"date\": \"July 25, 2023\", \"total\": \"$13735\"}"}
+{"index": 399, "answer": "{\"invoice_number\": \"552457\", \"date\": \"Aug. 17, 2023\", \"total\": \"$5343\"}"}
+{"index": 400, "answer": "{\"invoice_number\": \"93062905\", \"date\": \"08/16/2014\", \"total\": \"1800.81\"}"}
+{"index": 401, "answer": "{\"invoice_number\": \"26363966\", \"date\": \"06/13/2016\", \"total\": \"323,84\"}"}
+{"index": 402, "answer": "{\"invoice_number\": \"47703225\", \"date\": \"06/18/2018\", \"total\": \"56338.59\"}"}
+{"index": 403, "answer": "{\"invoice_number\": \"19512841\", \"date\": \"06/18/2012\", \"total\": \"1102.90\"}"}
+{"index": 404, "answer": "{\"invoice_number\": \"86976994\", \"date\": \"08/02/2020\", \"total\": \"852,50\"}"}
+{"index": 405, "answer": "{\"invoice_number\": \"92145\", \"date\": \"May 11, 2023\", \"total\": \"96.72\"}"}
+{"index": 406, "answer": "{\"invoice_number\": \"14778207\", \"date\": \"01/06/2017\", \"total\": \"11 152,00\"}"}
+{"index": 407, "answer": "{\"invoice_number\": \"86602235\", \"date\": \"04/03/2021\", \"total\": \"3729.94\"}"}
+{"index": 408, "answer": "{\"invoice_number\": \"33658471\", \"date\": \"12/24/2016\", \"total\": \"272,47\"}"}
+{"index": 409, "answer": "{\"invoice_number\": \"83186249\", \"date\": \"03/06/2014\", \"total\": \"9103.46\"}"}
+{"index": 410, "answer": "{\"invoice_number\": \"83186249\", \"date\": \"03/06/2014\", \"total\": \"9103.46\"}"}
+{"index": 411, "answer": "{\"invoice_number\": \"255034\", \"date\": \"July 25, 2023\", \"total\": \"$13735\"}"}
+{"index": 412, "answer": "{\"invoice_number\": \"95710850\", \"date\": \"10/30/2015\", \"total\": \"41,80\"}"}
+{"index": 413, "answer": "{\"invoice_number\": \"54533510\", \"date\": \"02/10/2021\", \"total\": \"63,69\"}"}
+{"index": 414, "answer": "{\"invoice_number\": \"94198533\", \"date\": \"08/03/2015\", \"total\": \"2350,26\"}"}
+{"index": 415, "answer": "{\"invoice_number\": \"99788357\", \"date\": \"10/14/2018\", \"total\": \"4,36\"}"}
+{"index": 416, "answer": "{\"invoice_number\": \"92145\", \"date\": \"May 11, 2023\", \"total\": \"96.72\"}"}
+{"index": 417, "answer": "{\"invoice_number\": \"25864435\", \"date\": \"01/08/2018\", \"total\": \"1186.57\"}"}
+{"index": 418, "answer": "{\"invoice_number\": \"39760888\", \"date\": \"07/20/2017\", \"total\": \"569,69\"}"}
+{"index": 419, "answer": "{\"invoice_number\": \"62842838\", \"date\": \"08/27/2019\", \"total\": \"20710.80\"}"}
+{"index": 420, "answer": "{\"invoice_number\": \"60882295\", \"date\": \"12/11/2013\", \"total\": \"686,02\"}"}
+{"index": 421, "answer": "{\"invoice_number\": \"83514460\", \"date\": \"06/10/2019\", \"total\": \"395,99\"}"}
+{"index": 422, "answer": "{\"invoice_number\": \"60241381\", \"date\": \"10/02/2018\", \"total\": \"115,39\"}"}
+{"index": 423, "answer": "{\"invoice_number\": \"106957\", \"date\": \"Aug. 2, 2023\", \"total\": \"$1458\"}"}
+{"index": 424, "answer": "{\"invoice_number\": \"60241381\", \"date\": \"10/02/2018\", \"total\": \"115,39\"}"}
+{"index": 425, "answer": "{\"invoice_number\": \"87689704\", \"date\": \"03/24/2020\", \"total\": \"687,50\"}"}
+{"index": 426, "answer": "{\"invoice_number\": \"64125453\", \"date\": \"03/25/2013\", \"total\": \"296,91\"}"}
+{"index": 427, "answer": "{\"invoice_number\": \"135\", \"date\": \"March 7 2020\", \"total\": \"877\"}"}
+{"index": 428, "answer": "{\"invoice_number\": \"78363\", \"date\": \"Jul 16, 2022\", \"total\": \"$92.00\"}"}
+{"index": 429, "answer": "{\"invoice_number\": \"257667\", \"date\": \"Oct. 19, 2023\", \"total\": \"$7139 USD\"}"}
+{"index": 430, "answer": "{\"invoice_number\": \"976987\", \"date\": \"Oct. 3, 2023\", \"total\": \"6558\"}"}
+{"index": 431, "answer": "{\"invoice_number\": \"PO-629227\", \"date\": \"Oct. 3, 2023\", \"total\": \"$1700\"}"}
+{"index": 432, "answer": "{\"invoice_number\": \"PO-876718\", \"date\": \"Oct. 30, 2023\", \"total\": \"$8370\"}"}
+{"index": 433, "answer": "{\"invoice_number\": \"PO-794887\", \"date\": \"Oct. 12, 2023\", \"total\": \"$5436\"}"}
+{"index": 434, "answer": "{\"invoice_number\": \"PO-136319\", \"date\": \"Oct. 14, 2023\", \"total\": \"$2558\"}"}
+{"index": 435, "answer": "{\"invoice_number\": \"PO-136319\", \"date\": \"Oct. 14, 2023\", \"total\": \"$2558\"}"}
+{"index": 436, "answer": "{\"invoice_number\": \"785836\", \"date\": \"Aug. 12, 2023\", \"total\": \"$1,1696\"}"}
+{"index": 437, "answer": "{\"invoice_number\": \"PO-213650\", \"date\": \"Oct. 1, 2023\", \"total\": \"$4711\"}"}
+{"index": 438, "answer": "{\"invoice_number\": \"PO-519700\", \"date\": \"Oct. 24, 2023\", \"total\": \"$8064\"}"}
+{"index": 439, "answer": "{\"invoice_number\": \"18436\", \"date\": \"May 09, 2022\", \"total\": \"159.72\"}"}
+{"index": 440, "answer": "{\"invoice_number\": \"PO-111178\", \"date\": \"Oct. 1, 2023\", \"total\": \"$0.00\"}"}
+{"index": 441, "answer": "{\"invoice_number\": \"283749\", \"date\": \"Oct. 16, 2023\", \"total\": \"$9967 USD\"}"}
+{"index": 442, "answer": "{\"invoice_number\": \"PO-621303\", \"date\": \"Oct. 24, 2023\", \"total\": \"$8180\"}"}
+{"index": 443, "answer": "{\"invoice_number\": \"PO-607518\", \"date\": \"Oct. 20, 2023\", \"total\": \"$8543\"}"}
+{"index": 444, "answer": "{\"invoice_number\": \"PO-620348\", \"date\": \"Oct. 23, 2023\", \"total\": \"$6433\"}"}
+{"index": 445, "answer": "{\"invoice_number\": \"PO-718970\", \"date\": \"Oct. 23, 2023\", \"total\": \"$7918\"}"}
+{"index": 446, "answer": "{\"invoice_number\": \"PO-786652\", \"date\": \"Oct. 10, 2023\", \"total\": \"$8646\"}"}
+{"index": 447, "answer": "{\"invoice_number\": \"PO-786652\", \"date\": \"Oct. 10, 2023\", \"total\": \"$8646\"}"}
+{"index": 448, "answer": "{\"invoice_number\": \"873386\", \"date\": \"Aug. 14, 2023\", \"total\": \"$1,811\"}"}
+{"index": 449, "answer": "{\"invoice_number\": \"441990\", \"date\": \"Oct. 19, 2023\", \"total\": \"$8339 USD\"}"}
+{"index": 450, "answer": "{\"invoice_number\": \"123927\", \"date\": \"Aug. 22, 2023\", \"total\": \"$7694\"}"}
+{"index": 451, "answer": "{\"invoice_number\": \"PO-700329\", \"date\": \"Oct. 28, 2023\", \"total\": \"$4439\"}"}
+{"index": 452, "answer": "{\"invoice_number\": \"PO-497729\", \"date\": \"Oct. 4, 2023\", \"total\": \"$8038\"}"}
+{"index": 453, "answer": "{\"invoice_number\": \"PO-884591\", \"date\": \"Oct. 16, 2023\", \"total\": \"$5870\"}"}
+{"index": 454, "answer": "{\"invoice_number\": \"PO-145092\", \"date\": \"Oct. 14, 2023\", \"total\": \"$5828\"}"}
+{"index": 455, "answer": "{\"invoice_number\": \"PO-936258\", \"date\": \"Oct. 21, 2023\", \"total\": \"$6263\"}"}
+{"index": 456, "answer": "{\"invoice_number\": \"PO-936258\", \"date\": \"Oct. 21, 2023\", \"total\": \"$6263\"}"}
+{"index": 457, "answer": "{\"invoice_number\": \"PO-571108\", \"date\": \"Oct. 18, 2023\", \"total\": \"$2765\"}"}
+{"index": 458, "answer": "{\"invoice_number\": \"PO-940559\", \"date\": \"Oct. 15, 2023\", \"total\": \"$9759\"}"}
+{"index": 459, "answer": "{\"invoice_number\": \"PO-232274\", \"date\": \"Oct. 2, 2023\", \"total\": \"$8775\"}"}
+{"index": 460, "answer": "{\"invoice_number\": \"411768\", \"date\": \"July 30, 2023\", \"total\": \"$2,151\"}"}
+{"index": 461, "answer": "{\"invoice_number\": \"12738\", \"date\": \"Jun 12, 2023\", \"total\": \"83.72\"}"}
+{"index": 462, "answer": "{\"invoice_number\": \"PO-281977\", \"date\": \"Oct. 10, 2023\", \"total\": \"$9834\"}"}
+{"index": 463, "answer": "{\"invoice_number\": \"282297\", \"date\": \"Oct. 18, 2023\", \"total\": \"$9846 USD\"}"}
+{"index": 464, "answer": "{\"invoice_number\": \"PO-274022\", \"date\": \"Oct. 23, 2023\", \"total\": \"$5531\"}"}
+{"index": 465, "answer": "{\"invoice_number\": \"PO-274022\", \"date\": \"Oct. 23, 2023\", \"total\": \"$5531\"}"}
+{"index": 466, "answer": "{\"invoice_number\": \"PO-389607\", \"date\": \"Oct. 27, 2023\", \"total\": \"$2623\"}"}
+{"index": 467, "answer": "{\"invoice_number\": \"PO-875811\", \"date\": \"Oct. 19, 2023\", \"total\": \"$6366\"}"}
+{"index": 468, "answer": "{\"invoice_number\": \"PO-877489\", \"date\": \"Oct. 23, 2023\", \"total\": \"$5687\"}"}
+{"index": 469, "answer": "{\"invoice_number\": \"PO-949333\", \"date\": \"Oct. 30, 2023\", \"total\": \"$2238\"}"}
+{"index": 470, "answer": "{\"invoice_number\": \"PO-644257\", \"date\": \"Oct. 12, 2023\", \"total\": \"$1551\"}"}
+{"index": 471, "answer": "{\"invoice_number\": \"PO-456887\", \"date\": \"Oct. 3, 2023\", \"total\": \"$1061\"}"}
+{"index": 472, "answer": "{\"invoice_number\": \"94637\", \"date\": \"Oct 15,2023\", \"total\": \"144.00\"}"}
+{"index": 473, "answer": "{\"invoice_number\": \"158843\", \"date\": \"July 29, 2023\", \"total\": \"$1,590.00\"}"}
+{"index": 474, "answer": "{\"invoice_number\": \"PO-281539\", \"date\": \"Oct. 1, 2023\", \"total\": \"$5678\"}"}
+{"index": 475, "answer": "{\"invoice_number\": \"233531\", \"date\": \"Oct. 19, 2023\", \"total\": \"$8146 USD\"}"}
+{"index": 476, "answer": "{\"invoice_number\": \"PO-139880\", \"date\": \"Oct. 15, 2023\", \"total\": \"$9304\"}"}
+{"index": 477, "answer": "{\"invoice_number\": \"PO-675353\", \"date\": \"Oct. 11, 2023\", \"total\": \"$4573\"}"}
+{"index": 478, "answer": "{\"invoice_number\": \"PO-422394\", \"date\": \"Oct. 22, 2023\", \"total\": \"$7814\"}"}
+{"index": 479, "answer": "{\"invoice_number\": \"PO-422394\", \"date\": \"Oct. 22, 2023\", \"total\": \"$7814\"}"}
+{"index": 480, "answer": "{\"invoice_number\": \"PO-427421\", \"date\": \"Oct. 11, 2023\", \"total\": \"$0.00\"}"}
+{"index": 481, "answer": "{\"invoice_number\": \"PO-198922\", \"date\": \"Oct. 26, 2023\", \"total\": \"$3888\"}"}
+{"index": 482, "answer": "{\"invoice_number\": \"PO-554764\", \"date\": \"Oct. 30, 2023\", \"total\": \"$3788\"}"}
+{"index": 483, "answer": "{\"invoice_number\": \"42545494\", \"date\": \"10/09/2020\", \"total\": \"4285,26\"}"}
+{"index": 484, "answer": "{\"invoice_number\": \"PO-777764\", \"date\": \"Oct. 6, 2023\", \"total\": \"$7216\"}"}
+{"index": 485, "answer": "{\"invoice_number\": \"137370\", \"date\": \"Aug. 18, 2023\", \"total\": \"$1,3670\"}"}
+{"index": 486, "answer": "{\"invoice_number\": \"291046\", \"date\": \"Oct. 28, 2023\", \"total\": \"$6953 USD\"}"}
+{"index": 487, "answer": "{\"invoice_number\": \"PO-634392\", \"date\": \"Oct. 12, 2023\", \"total\": \"1987\"}"}
+{"index": 488, "answer": "{\"invoice_number\": \"PO-240240\", \"date\": \"Oct. 16, 2023\", \"total\": \"$3,911.00\"}"}
+{"index": 489, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 490, "answer": "{\"invoice_number\": \"6282\", \"date\": \"Oct 12, 2022\", \"total\": \"165.48\"}"}
+{"index": 491, "answer": "{\"invoice_number\": \"6282\", \"date\": \"Oct 12, 2022\", \"total\": \"165.48\"}"}
+{"index": 492, "answer": "{\"invoice_number\": \"9362\", \"date\": \"Nov 16, 2022\", \"total\": \"222.48\"}"}
+{"index": 493, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 494, "answer": "{\"invoice_number\": \"56759346\", \"date\": \"02/08/2016\", \"total\": \"64 577,12\"}"}
+{"index": 495, "answer": "{\"invoice_number\": \"8265\", \"date\": \"Jun 21, 2022\", \"total\": \"185.48\"}"}
+{"index": 496, "answer": "{\"invoice_number\": \"7254\", \"date\": \"Feb 16, 2022\", \"total\": \"215.48\"}"}
+{"index": 497, "answer": "{\"invoice_number\": \"137370\", \"date\": \"Aug. 18, 2023\", \"total\": \"$1,3670\"}"}
+{"index": 498, "answer": "{\"invoice_number\": \"7254\", \"date\": \"Feb 16, 2022\", \"total\": \"215.48\"}"}
+{"index": 499, "answer": "{\"invoice_number\": \"134\", \"date\": \"March 6 2020\", \"total\": \"1202\"}"}
+{"index": 500, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 501, "answer": "{\"invoice_number\": \"6924\", \"date\": \"Oct 12, 2022\", \"total\": \"$203.48\"}"}
+{"index": 502, "answer": "{\"invoice_number\": \"8262\", \"date\": \"Aug 12, 2022\", \"total\": \"213.48\"}"}
+{"index": 503, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 504, "answer": "{\"invoice_number\": \"8336\", \"date\": \"Mar 10, 2022\", \"total\": \"135.48\"}"}
+{"index": 505, "answer": "{\"invoice_number\": \"56759346\", \"date\": \"02/08/2016\", \"total\": \"64 577,12\"}"}
+{"index": 506, "answer": "{\"invoice_number\": \"8336\", \"date\": \"Mar 10, 2022\", \"total\": \"135.48\"}"}
+{"index": 507, "answer": "{\"invoice_number\": \"1726\", \"date\": \"Jul 12, 2022\", \"total\": \"217.48\"}"}
+{"index": 508, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 509, "answer": "{\"invoice_number\": \"632188\", \"date\": \"Aug. 22, 2023\", \"total\": \"$120}"}
+{"index": 510, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 511, "answer": "{\"invoice_number\": \"5931\", \"date\": \"Jul 23, 2022\", \"total\": \"274.48\"}"}
+{"index": 512, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 513, "answer": "{\"invoice_number\": \"3572\", \"date\": \"Oct 10, 2022\", \"total\": \"202.48\"}"}
+{"index": 514, "answer": "{\"invoice_number\": \"8367\", \"date\": \"Jul 02, 2022\", \"total\": \"233.48\"}"}
+{"index": 515, "answer": "{\"invoice_number\": \"4976\", \"date\": \"Mar 23, 2022\", \"total\": \"197.48\"}"}
+{"index": 516, "answer": "{\"invoice_number\": \"13201609\", \"date\": \"04/06/2019\", \"total\": \"47630.32\"}"}
+{"index": 517, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 518, "answer": "{\"invoice_number\": \"8924\", \"date\": \"Jan 23, 2022\", \"total\": \"170.48\"}"}
+{"index": 519, "answer": "{\"invoice_number\": \"8924\", \"date\": \"Jan 23, 2022\", \"total\": \"170.48\"}"}
+{"index": 520, "answer": "{\"invoice_number\": \"7831\", \"date\": \"Feb 23, 2022\", \"total\": \"184.48\"}"}
+{"index": 521, "answer": "{\"invoice_number\": \"293762\", \"date\": \"Aug. 4, 2023\", \"total\": \"$1,110\"}"}
+{"index": 522, "answer": "{\"invoice_number\": \"509738\", \"date\": \"Aug. 4, 2023\", \"total\": \"$9420\"}"}
+{"index": 523, "answer": "{\"invoice_number\": \"21195585\", \"date\": \"03/02/2021\", \"total\": \"8766,81\"}"}
+{"index": 524, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 525, "answer": "{\"invoice_number\": \"72945558\", \"date\": \"11/11/2019\", \"total\": \"48356,88\"}"}
+{"index": 526, "answer": "{\"invoice_number\": \"65795911\", \"date\": \"03/25/2012\", \"total\": \"471.20\"}"}
+{"index": 527, "answer": "{\"invoice_number\": \"65795911\", \"date\": \"03/25/2012\", \"total\": \"471.20\"}"}
+{"index": 528, "answer": "{\"invoice_number\": \"456537\", \"date\": \"Aug. 23, 2023\", \"total\": \"$9578\"}"}
+{"index": 529, "answer": "{\"invoice_number\": \"93820332\", \"date\": \"11/08/2012\", \"total\": \"244,10\"}"}
+{"index": 530, "answer": "{\"invoice_number\": \"93779204\", \"date\": \"05/04/2020\", \"total\": \"643268\"}"}
+{"index": 531, "answer": "{\"invoice_number\": \"21168841\", \"date\": \"01/05/2017\", \"total\": \"43 205,77\"}"}
+{"index": 532, "answer": "{\"invoice_number\": \"60179250\", \"date\": \"12/24/2013\", \"total\": \"5243951\"}"}
+{"index": 533, "answer": "{\"invoice_number\": \"119\", \"date\": \"March 10, 2022\", \"total\": \"920.78\"}"}
+{"index": 534, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 535, "answer": "{\"invoice_number\": \"84267\", \"date\": \"Mar 23, 2022\", \"total\": \"$154.48\"}"}
+{"index": 536, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 537, "answer": "{\"invoice_number\": null, \"date\": null, \"total\": null}"}
+{"index": 538, "answer": "{\"invoice_number\": \"21867177\", \"date\": \"08/19/2020\", \"total\": \"86 229,09\"}"}
+{"index": 539, "answer": "{\"invoice_number\": \"87323283\", \"date\": \"09/03/2015\", \"total\": \"567,57\"}"}
+{"index": 540, "answer": "{\"invoice_number\": \"238040\", \"date\": \"July 30, 2023\", \"total\": \"$5349\"}"}
+{"index": 541, "answer": "{\"invoice_number\": \"77536206\", \"date\": \"12/14/2011\", \"total\": \"170,49\"}"}
+{"index": 542, "answer": "{\"invoice_number\": \"64904048\", \"date\": \"03/16/2018\", \"total\": \"453.04\"}"}
+{"index": 543, "answer": "{\"invoice_number\": \"34806238\", \"date\": \"12/19/2011\", \"total\": \"6869.45\"}"}
+{"index": 544, "answer": "{\"invoice_number\": \"69874232\", \"date\": \"09/14/2016\", \"total\": \"54,95\"}"}
+{"index": 545, "answer": "{\"invoice_number\": \"69874232\", \"date\": \"09/14/2016\", \"total\": \"54,95\"}"}
+{"index": 546, "answer": "{\"invoice_number\": \"39349\", \"date\": \"Feb 09,2022\", \"total\": \"156.00\"}"}
+{"index": 547, "answer": "{\"invoice_number\": \"88082213\", \"date\": \"05/07/2021\", \"total\": \"3 624,46\"}"}
+{"index": 548, "answer": "{\"invoice_number\": \"65873820\", \"date\": \"10/21/2013\", \"total\": \"376,89\"}"}
+{"index": 549, "answer": "{\"invoice_number\": \"35804413\", \"date\": \"08/09/2019\", \"total\": \"118327.07\"}"}
+{"index": 550, "answer": "{\"invoice_number\": \"14683315\", \"date\": \"11/09/2019\", \"total\": \"8268.70\"}"}
+{"index": 551, "answer": "{\"invoice_number\": \"102\", \"date\": \"February 21, 2022\", \"total\": \"853.72\"}"}
+{"index": 552, "answer": "{\"invoice_number\": \"266726\", \"date\": \"Aug. 1, 2023\", \"total\": \"$8276\"}"}
+{"index": 553, "answer": "{\"invoice_number\": \"22729351\", \"date\": \"08/21/2014\", \"total\": \"868,21\"}"}
+{"index": 554, "answer": "{\"invoice_number\": \"77915702\", \"date\": \"06/24/2017\", \"total\": \"87,96\"}"}
+{"index": 555, "answer": "{\"invoice_number\": \"77915702\", \"date\": \"06/24/2017\", \"total\": \"87,96\"}"}
+{"index": 556, "answer": "{\"invoice_number\": \"61032301\", \"date\": \"11/14/2018\", \"total\": \"123,13\"}"}
+{"index": 557, "answer": "{\"invoice_number\": \"39349\", \"date\": \"Feb 09,2022\", \"total\": \"156.00\"}"}
+{"index": 558, "answer": "{\"invoice_number\": \"80619792\", \"date\": \"10/16/2017\", \"total\": \"3 154,14\"}"}
+{"index": 559, "answer": "{\"invoice_number\": \"27509428\", \"date\": \"04/08/2015\", \"total\": \"19094.30\"}"}
+{"index": 560, "answer": "{\"invoice_number\": \"49701600\", \"date\": \"12/26/2017\", \"total\": \"6234,94\"}"}
+{"index": 561, "answer": "{\"invoice_number\": \"25789818\", \"date\": \"10/25/2013\", \"total\": \"446596\"}"}
+{"index": 562, "answer": "{\"invoice_number\": \"70876496\", \"date\": \"09/14/2013\", \"total\": \"240,48\"}"}
+{"index": 563, "answer": "{\"invoice_number\": \"70876496\", \"date\": \"09/14/2013\", \"total\": \"240,48\"}"}
+{"index": 564, "answer": "{\"invoice_number\": \"355162\", \"date\": \"Aug. 19, 2023\", \"total\": \"$7816\"}"}
+{"index": 565, "answer": "{\"invoice_number\": \"33190837\", \"date\": \"07/03/2020\", \"total\": \"785,83\"}"}
+{"index": 566, "answer": "{\"invoice_number\": \"15966359\", \"date\": \"09/08/2018\", \"total\": \"485,95\"}"}
+{"index": 567, "answer": "{\"invoice_number\": \"120\", \"date\": \"March 11, 2022\", \"total\": \"925.00\"}"}
+{"index": 568, "answer": "{\"invoice_number\": \"94362\", \"date\": \"Nov 23,2023\", \"total\": \"119.72\"}"}
+{"index": 569, "answer": "{\"invoice_number\": \"35190532\", \"date\": \"01/05/2016\", \"total\": \"1642.56\"}"}
+{"index": 570, "answer": "{\"invoice_number\": \"30684166\", \"date\": \"04/16/2020\", \"total\": \"320,83\"}"}
+{"index": 571, "answer": "{\"invoice_number\": \"898724443\", \"date\": \"11/16/2014\", \"total\": \"219,73\"}"}
+{"index": 572, "answer": "{\"invoice_number\": \"898724443\", \"date\": \"11/16/2014\", \"total\": \"219,73\"}"}
+{"index": 573, "answer": "{\"invoice_number\": \"39905043\", \"date\": \"07/15/2019\", \"total\": \"8769.12\"}"}
+{"index": 574, "answer": "{\"invoice_number\": \"52997801\", \"date\": \"10/10/2015\", \"total\": \"217,14\"}"}
+{"index": 575, "answer": "{\"invoice_number\": \"31002650\", \"date\": \"05/01/2020\", \"total\": \"454,65\"}"}
+{"index": 576, "answer": "{\"invoice_number\": \"128161\", \"date\": \"Aug. 1, 2023\", \"total\": \"$8053\"}"}
+{"index": 577, "answer": "{\"invoice_number\": \"97539049\", \"date\": \"10/14/2014\", \"total\": \"2348.34\"}"}
+{"index": 578, "answer": "{\"invoice_number\": \"16273983\", \"date\": \"04/01/2017\", \"total\": \"819,06\"}"}
+{"index": 579, "answer": "{\"invoice_number\": \"73627\", \"date\": \"Dec 19,2022\", \"total\": \"$71.00\"}"}
+{"index": 580, "answer": "{\"invoice_number\": \"16273983\", \"date\": \"04/01/2017\", \"total\": \"819,06\"}"}
+{"index": 581, "answer": "{\"invoice_number\": \"89969473\", \"date\": \"10/29/2016\", \"total\": \"797,91\"}"}
+{"index": 582, "answer": "{\"invoice_number\": \"72128555\", \"date\": \"12/25/2013\", \"total\": \"732,34\"}"}
+{"index": 583, "answer": "{\"invoice_number\": \"11580833\", \"date\": \"11/24/2019\", \"total\": \"5138.35\"}"}
+{"index": 584, "answer": "{\"invoice_number\": \"74589240\", \"date\": \"12/08/2013\", \"total\": \"12 973,88\"}"}
+{"index": 585, "answer": "{\"invoice_number\": \"50791892\", \"date\": \"03/08/2016\", \"total\": \"24 596,92\"}"}
+{"index": 586, "answer": "{\"invoice_number\": \"81978187\", \"date\": \"01/17/2013\", \"total\": \"124,79\"}"}
+{"index": 587, "answer": "{\"invoice_number\": \"81978187\", \"date\": \"01/17/2013\", \"total\": \"124,79\"}"}
+{"index": 588, "answer": "{\"invoice_number\": \"99314100\", \"date\": \"06/25/2014\", \"total\": \"6 573,33\"}"}
+{"index": 589, "answer": "{\"invoice_number\": \"68688408\", \"date\": \"03/20/2016\", \"total\": \"91,27\"}"}
+{"index": 590, "answer": "{\"invoice_number\": \"92174\", \"date\": \"Jan 26,2023\", \"total\": \"108.72\"}"}
+{"index": 591, "answer": "{\"invoice_number\": \"13407985\", \"date\": \"11/22/2013\", \"total\": \"545975\"}"}
+{"index": 592, "answer": "{\"invoice_number\": \"57986024\", \"date\": \"10/17/2015\", \"total\": \"237,29\"}"}
+{"index": 593, "answer": "{\"invoice_number\": \"77596491\", \"date\": \"01/31/2021\", \"total\": \"24,95\"}"}
+{"index": 594, "answer": "{\"invoice_number\": \"46506594\", \"date\": \"03/12/2012\", \"total\": \"146945\"}"}
+{"index": 595, "answer": "{\"invoice_number\": \"46506594\", \"date\": \"03/12/2012\", \"total\": \"146945\"}"}
+{"index": 596, "answer": "{\"invoice_number\": \"44456646\", \"date\": \"03/21/2015\", \"total\": \"316,10\"}"}
+{"index": 597, "answer": "{\"invoice_number\": \"99040677\", \"date\": \"03/21/2018\", \"total\": \"10 996,07\"}"}
+{"index": 598, "answer": "{\"invoice_number\": \"98858130\", \"date\": \"01/28/2021\", \"total\": \"442,07\"}"}
+{"index": 599, "answer": "{\"invoice_number\": \"36187296\", \"date\": \"01/05/2017\", \"total\": \"518,80\"}"}
+{"index": 600, "answer": "{\"invoice_number\": \"56908352\", \"date\": \"01/11/2015\", \"total\": \"188,11\"}"}

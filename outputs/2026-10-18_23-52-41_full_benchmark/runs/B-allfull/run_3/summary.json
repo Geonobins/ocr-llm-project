@@ -1,0 +1,229 @@
+{
+  "config_name": "B-allfull",
+  "architecture": "B",
+  "description": "B with every document on the FULL fp32 route (no quantized model)",
+  "config": {
+    "ocr_workers": 3,
+    "batch_size": 8,
+    "use_cache": true,
+    "routing": "all_full",
+    "fast_precision": "4bit",
+    "full_precision": "fp32",
+    "thresholds": {
+      "max_tokens_fast": 300,
+      "min_confidence_fast": 85.0
+    }
+  },
+  "run": 3,
+  "timestamp": "2026-10-19 09:29:19",
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "metrics": {
+    "documents": 600,
+    "processed": 600,
+    "errors": 0,
+    "cached": 0,
+    "wall_time_s": 123.067,
+    "throughput_docs_per_min": 292.523,
+    "mean_latency_s": 45.95,
+    "p50_latency_s": 28.9149,
+    "p95_latency_s": 115.977,
+    "mean_service_time_s": 0.7149,
+    "mean_ocr_time_s": 0.6005,
+    "mean_embed_time_s": 0.0086,
+    "mean_llm_time_s": 0.1059,
+    "route_fast": 0,
+    "route_full": 600,
+    "cost_total_eur": 0.01196,
+    "cost_per_doc_eur": 2e-05,
+    "cost_per_100_docs_eur": 0.002,
+    "peak_rss_mb": 2065.9,
+    "mean_rss_mb": 1777.2,
+    "peak_gpu_mb": 3124.5,
+    "baseline_gpu_mb": 1362.5,
+    "cache_hits": 0,
+    "cache_misses": 600,
+    "cache_entries": 565,
+    "model_load_time_s": 1.24,
+    "torch_allocated_after_load_mb": 1052.1,
+    "torch_peak_allocated_mb": 1645.4
+  },
+  "scores": {
+    "all": {
+      "invoice_number": {
+        "precision": 0.9633,
+        "recall": 0.9731,
+        "f1": 0.9682,
+        "accuracy": 0.9633,
+        "tp": 578,
+        "fp": 22,
+        "fn": 16,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9533,
+        "recall": 0.9662,
+        "f1": 0.9597,
+        "accuracy": 0.9533,
+        "tp": 572,
+        "fp": 28,
+        "fn": 20,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8932,
+        "recall": 0.8946,
+        "f1": 0.8939,
+        "accuracy": 0.8932,
+        "tp": 535,
+        "fp": 64,
+        "fn": 63,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9366,
+        "recall": 0.9445,
+        "f1": 0.9406,
+        "accuracy": 0.9366,
+        "tp": 1685,
+        "fp": 114,
+        "fn": 99,
+        "tn": 0
+      },
+      "documents": 600,
+      "documents_fully_correct": 505,
+      "document_accuracy": 0.8417
+    },
+    "real": {
+      "invoice_number": {
+        "precision": 0.93,
+        "recall": 0.949,
+        "f1": 0.9394,
+        "accuracy": 0.93,
+        "tp": 279,
+        "fp": 21,
+        "fn": 15,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9067,
+        "recall": 0.9315,
+        "f1": 0.9189,
+        "accuracy": 0.9067,
+        "tp": 272,
+        "fp": 28,
+        "fn": 20,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8161,
+        "recall": 0.8188,
+        "f1": 0.8174,
+        "accuracy": 0.8161,
+        "tp": 244,
+        "fp": 55,
+        "fn": 54,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.8843,
+        "recall": 0.8993,
+        "f1": 0.8918,
+        "accuracy": 0.8843,
+        "tp": 795,
+        "fp": 104,
+        "fn": 89,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 215,
+      "document_accuracy": 0.7167
+    },
+    "synthetic": {
+      "invoice_number": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 299,
+        "fp": 1,
+        "fn": 1,
+        "tn": 0
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 300,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.97,
+        "recall": 0.97,
+        "f1": 0.97,
+        "accuracy": 0.97,
+        "tp": 291,
+        "fp": 9,
+        "fn": 9,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9889,
+        "recall": 0.9889,
+        "f1": 0.9889,
+        "accuracy": 0.9889,
+        "tp": 890,
+        "fp": 10,
+        "fn": 10,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 290,
+      "document_accuracy": 0.9667
+    }
+  },
+  "review": {
+    "all": {
+      "documents": 600,
+      "straight_through_rate": 0.92,
+      "flagged": 48,
+      "accuracy_auto_accepted": 0.9094,
+      "accuracy_without_review": 0.8417,
+      "wrong_documents": 95,
+      "wrong_caught_by_flag": 45,
+      "flag_precision": 0.9375
+    },
+    "real": {
+      "documents": 300,
+      "straight_through_rate": 0.8733,
+      "flagged": 38,
+      "accuracy_auto_accepted": 0.813,
+      "accuracy_without_review": 0.7167,
+      "wrong_documents": 85,
+      "wrong_caught_by_flag": 36,
+      "flag_precision": 0.9474
+    },
+    "synthetic": {
+      "documents": 300,
+      "straight_through_rate": 0.9667,
+      "flagged": 10,
+      "accuracy_auto_accepted": 0.9966,
+      "accuracy_without_review": 0.9667,
+      "wrong_documents": 10,
+      "wrong_caught_by_flag": 9,
+      "flag_precision": 0.9
+    }
+  }
+}

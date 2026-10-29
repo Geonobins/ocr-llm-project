@@ -1,0 +1,35 @@
+{
+  "variant": "A",
+  "description": "Architecture A: invoices processed one at a time in arrival order",
+  "rate_per_min": 240,
+  "run": 1,
+  "seed": 1240,
+  "timestamp": "2026-10-20 01:08:16",
+  "hardware": {
+    "python": "3.12.2",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 12,
+    "ram_total_gb": 15.7,
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_vram_gb": 4.0
+  },
+  "metrics": {
+    "rate_per_min": 240,
+    "documents": 60,
+    "errors": 0,
+    "mean_latency_s": 27.925,
+    "p50_latency_s": 27.5884,
+    "p95_latency_s": 53.7351,
+    "max_latency_s": 56.8594,
+    "mean_service_time_s": 1.2235,
+    "mean_ocr_time_s": 0.6007,
+    "mean_llm_time_s": 0.6055,
+    "arrival_span_s": 16.61,
+    "finished_after_s": 73.47,
+    "throughput_docs_per_min": 49.0
+  },
+  "f1_all": 0.9444
+}

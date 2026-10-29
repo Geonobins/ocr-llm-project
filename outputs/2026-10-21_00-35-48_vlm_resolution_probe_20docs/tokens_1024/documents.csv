@@ -1,0 +1,21 @@
+name,index,source,route,cached,ocr_time,embed_time,llm_time,service_time,latency,error,feat_valid_json,feat_visual_tokens,pred_invoice_number,pred_date,pred_total,truth_invoice_number,truth_date,truth_total,score_invoice_number,score_date,score_total,score_correct_fields,score_all_correct
+test_invoice1,1,real,VLM-1024,False,0.0,0.0,3.6627,3.6627,3.6627,,True,988,01234,11.02.2030,440,01234,11.02.2030,$440,TP,TP,TP,3,True
+test_invoice33,33,synthetic,VLM-1024,False,0.0,0.0,3.8017,3.8017,3.8017,,True,609,INV-9497-33,"August 22, 2024","22,100",INV-9497-33,"August 22, 2024","$22,100",TP,TP,TP,3,True
+test_invoice64,64,synthetic,VLM-1024,False,0.0,0.0,4.0748,4.0748,4.0748,,True,980,INV-2172-64,"August 22, 2024","35,830",INV-2172-64,"August 22, 2024","$35,830",TP,TP,TP,3,True
+test_invoice96,96,synthetic,VLM-1024,False,0.0,0.0,3.4366,3.4366,3.4366,,True,609,INV-8609-96,"July 5, 2024","28,470",INV-8609-96,"July 5, 2024","$28,470",TP,TP,TP,3,True
+test_invoice127,127,synthetic,VLM-1024,False,0.0,0.0,3.4405,3.4405,3.4405,,True,609,INV-1205-127,"May 2, 2024","14,640",INV-1205-127,"May 2, 2024","$14,640",TP,TP,TP,3,True
+test_invoice159,159,synthetic,VLM-1024,False,0.0,0.0,3.6325,3.6325,3.6325,,True,609,INV-3099-159,"August 22, 2024","30,170",INV-3099-159,"August 22, 2024","$30,170",TP,TP,TP,3,True
+test_invoice190,190,synthetic,VLM-1024,False,0.0,0.0,4.117,4.117,4.117,,True,980,INV-8379-190,"June 11, 2024","37,380",INV-8379-190,"June 11, 2024","$37,380",TP,TP,TP,3,True
+test_invoice222,222,synthetic,VLM-1024,False,0.0,0.0,3.5866,3.5866,3.5866,,True,609,INV-7969-222,"August 22, 2024","30,430",INV-7969-222,"August 22, 2024","$30,430",TP,TP,TP,3,True
+test_invoice253,253,synthetic,VLM-1024,False,0.0,0.0,3.4178,3.4178,3.4178,,True,609,INV-5411-253,"July 5, 2024","5,420",INV-5411-253,"July 5, 2024","$5,420",TP,TP,TP,3,True
+test_invoice285,285,synthetic,VLM-1024,False,0.0,0.0,4.1411,4.1411,4.1411,,True,980,INV-4263-285,"June 11, 2024","29,730",INV-4263-285,"June 11, 2024","$29,730",TP,TP,TP,3,True
+test_invoice316,316,real,VLM-1024,False,0.0,0.0,3.5699,3.5699,3.5699,,True,988,110,FEB 11 2020,1574,110,FEB 11 2020,1574,TP,TP,TP,3,True
+test_invoice348,348,real,VLM-1024,False,0.0,0.0,3.9029,3.9029,3.9029,,True,988,12323459,08/04/2013,"81,68",12323459,08/04/2013,"$ 81,68",TP,TP,TP,3,True
+test_invoice379,379,real,VLM-1024,False,0.0,0.0,4.0701,4.0701,4.0701,,True,988,65095335,02/15/2017,"46910,41",65095335,02/15/2017,"$ 46 910,41",TP,TP,TP,3,True
+test_invoice411,411,real,VLM-1024,False,0.0,0.0,3.8994,3.8994,3.8994,,True,988,255034,"July 25, 2023",13735,255034,"July 25, 2023",$13735,TP,TP,TP,3,True
+test_invoice442,442,real,VLM-1024,False,0.0,0.0,4.4163,4.4163,4.4163,,True,988,PO-621303,"Oct. 24, 2023",8180,PO-621303,"Oct. 24, 2023",$8180,TP,TP,TP,3,True
+test_invoice474,474,real,VLM-1024,False,0.0,0.0,4.2535,4.2535,4.2535,,True,988,PO-281539,"Oct. 1, 2023",5678,PO-281539,"Oct. 1, 2023",$5678,TP,TP,TP,3,True
+test_invoice505,505,real,VLM-1024,False,0.0,0.0,4.175,4.175,4.175,,True,988,56759346,02/08/2016,"64 577,12",56759346,02/08/2016,"$ 64 577,12",TP,TP,TP,3,True
+test_invoice537,537,real,VLM-1024,False,0.0,0.0,2.7396,2.7396,2.7396,,True,988,null,null,null,null,null,null,TN,TN,TN,3,True
+test_invoice568,568,real,VLM-1024,False,0.0,0.0,3.7837,3.7837,3.7837,,True,1008,94362,"Nov 23,2023",119.72,94362,"Nov 23,2023",$119.72,TP,TP,TP,3,True
+test_invoice600,600,real,VLM-1024,False,0.0,0.0,4.1226,4.1226,4.1226,,True,988,56908352,01/11/2015,"188,11",56908352,01/11/2015,"188,11",TP,TP,TP,3,True

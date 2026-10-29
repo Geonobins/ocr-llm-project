@@ -1,0 +1,174 @@
+{
+  "summary": {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "quantization": "bitsandbytes 4-bit NF4, double quantization, bf16 compute",
+    "max_visual_tokens": 1024,
+    "documents": 20,
+    "errors": 0,
+    "out_of_memory": 0,
+    "model_load_time_s": 5.3,
+    "wall_time_s": 76.25,
+    "throughput_docs_per_min": 15.74,
+    "mean_time_per_invoice_s": 3.8122,
+    "median_time_per_invoice_s": 3.8506,
+    "p95_time_per_invoice_s": 4.2617,
+    "mean_visual_tokens": 874.1,
+    "valid_json_rate": 1.0,
+    "torch_peak_allocated_mb": 1745.1,
+    "peak_rss_mb": 1803.7,
+    "peak_gpu_mb": 2474.5,
+    "f1": {
+      "all": 1.0,
+      "real": 1.0,
+      "synthetic": 1.0
+    },
+    "f1_fields": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 1.0
+    },
+    "f1_fields_real": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 1.0
+    },
+    "document_accuracy": 1.0
+  },
+  "scores": {
+    "all": {
+      "invoice_number": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 19,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 19,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "total": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 19,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "overall": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 57,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "documents": 20,
+      "documents_fully_correct": 20,
+      "document_accuracy": 1.0
+    },
+    "real": {
+      "invoice_number": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "total": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1
+      },
+      "overall": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 30,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3
+      },
+      "documents": 11,
+      "documents_fully_correct": 11,
+      "document_accuracy": 1.0
+    },
+    "synthetic": {
+      "invoice_number": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "date": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "total": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "documents": 9,
+      "documents_fully_correct": 9,
+      "document_accuracy": 1.0
+    }
+  }
+}

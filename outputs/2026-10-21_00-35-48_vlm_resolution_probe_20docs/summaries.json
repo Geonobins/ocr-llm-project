@@ -1,0 +1,107 @@
+[
+  {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "quantization": "bitsandbytes 4-bit NF4, double quantization, bf16 compute",
+    "max_visual_tokens": 512,
+    "documents": 20,
+    "errors": 0,
+    "out_of_memory": 0,
+    "model_load_time_s": 7.68,
+    "wall_time_s": 64.56,
+    "throughput_docs_per_min": 18.59,
+    "mean_time_per_invoice_s": 3.2264,
+    "median_time_per_invoice_s": 3.2306,
+    "p95_time_per_invoice_s": 3.6708,
+    "mean_visual_tokens": 493.9,
+    "valid_json_rate": 1.0,
+    "torch_peak_allocated_mb": 1567.7,
+    "peak_rss_mb": 1610.6,
+    "peak_gpu_mb": 1896.5,
+    "f1": {
+      "all": 0.9474,
+      "real": 0.9,
+      "synthetic": 1.0
+    },
+    "f1_fields": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 0.8421
+    },
+    "f1_fields_real": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 0.7
+    },
+    "document_accuracy": 0.85
+  },
+  {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "quantization": "bitsandbytes 4-bit NF4, double quantization, bf16 compute",
+    "max_visual_tokens": 1024,
+    "documents": 20,
+    "errors": 0,
+    "out_of_memory": 0,
+    "model_load_time_s": 5.3,
+    "wall_time_s": 76.25,
+    "throughput_docs_per_min": 15.74,
+    "mean_time_per_invoice_s": 3.8122,
+    "median_time_per_invoice_s": 3.8506,
+    "p95_time_per_invoice_s": 4.2617,
+    "mean_visual_tokens": 874.1,
+    "valid_json_rate": 1.0,
+    "torch_peak_allocated_mb": 1745.1,
+    "peak_rss_mb": 1803.7,
+    "peak_gpu_mb": 2474.5,
+    "f1": {
+      "all": 1.0,
+      "real": 1.0,
+      "synthetic": 1.0
+    },
+    "f1_fields": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 1.0
+    },
+    "f1_fields_real": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 1.0
+    },
+    "document_accuracy": 1.0
+  },
+  {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "quantization": "bitsandbytes 4-bit NF4, double quantization, bf16 compute",
+    "max_visual_tokens": 2048,
+    "documents": 20,
+    "errors": 0,
+    "out_of_memory": 0,
+    "model_load_time_s": 6.59,
+    "wall_time_s": 103.54,
+    "throughput_docs_per_min": 11.59,
+    "mean_time_per_invoice_s": 5.1766,
+    "median_time_per_invoice_s": 5.7151,
+    "p95_time_per_invoice_s": 6.8242,
+    "mean_visual_tokens": 1445.8,
+    "valid_json_rate": 1.0,
+    "torch_peak_allocated_mb": 2329.4,
+    "peak_rss_mb": 1875.0,
+    "peak_gpu_mb": 3060.5,
+    "f1": {
+      "all": 0.9474,
+      "real": 0.9,
+      "synthetic": 1.0
+    },
+    "f1_fields": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 0.8421
+    },
+    "f1_fields_real": {
+      "invoice_number": 1.0,
+      "date": 1.0,
+      "total": 0.7
+    },
+    "document_accuracy": 0.85
+  }
+]

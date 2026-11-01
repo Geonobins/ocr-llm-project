@@ -1,0 +1,4 @@
+file,invoice,field,prediction,truth,before,strict,relaxed
+outputs/2026-10-20_23-54-32_vlm_baseline/tokens_1024/documents.csv,test_invoice436,total,"1,1696",$11696,TP,FP_FN,FP_FN
+outputs/2026-10-20_23-54-32_vlm_baseline/tokens_1024/documents.csv,test_invoice571,invoice_number,898724443,89872443,TP,FP_FN,TP
+outputs/2026-10-20_23-54-32_vlm_baseline/tokens_1024/documents.csv,test_invoice572,invoice_number,898724443,89872443,TP,FP_FN,TP

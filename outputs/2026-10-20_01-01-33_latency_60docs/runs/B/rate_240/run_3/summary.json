@@ -31,5 +31,7 @@
     "finished_after_s": 14.55,
     "throughput_docs_per_min": 247.44
   },
-  "f1_all": 0.9444
+  "f1_all": 0.9444,
+  "f1_all_lenient_scorer": 0.9444,
+  "f1_all_relaxed": 0.9444
 }

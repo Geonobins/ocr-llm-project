@@ -37,6 +37,8 @@ METRIC_COLUMNS = [
     ("f1_real", "F1 (real)"),
     ("f1_synthetic", "F1 (synthetic)"),
     ("document_accuracy", "Documents fully correct"),
+    ("f1_all_relaxed", "F1 (all), relaxed"),
+    ("document_accuracy_relaxed", "Fully correct, relaxed"),
 ]
 
 
@@ -58,6 +60,10 @@ def load_runs(results_dir: Path) -> pd.DataFrame:
             row[f"f1_{field}"] = scores["all"][field]["f1"]
             row[f"precision_{field}"] = scores["all"][field]["precision"]
             row[f"recall_{field}"] = scores["all"][field]["recall"]
+        relaxed = payload.get("scores_relaxed")
+        if relaxed:
+            row["f1_all_relaxed"] = relaxed["all"]["overall"]["f1"]
+            row["document_accuracy_relaxed"] = relaxed["all"]["document_accuracy"]
         review = payload.get("review", {}).get("all")
         if review:
             row["straight_through_rate"] = review["straight_through_rate"]
@@ -127,6 +133,14 @@ def markdown_tables(summary: pd.DataFrame, runs: pd.DataFrame) -> str:
     lines.append("## Accuracy")
     lines.append("")
     acc = ["f1_all", "f1_real", "f1_synthetic", "document_accuracy"]
+    if "f1_all_relaxed_mean" in summary.columns:
+        acc += ["f1_all_relaxed", "document_accuracy_relaxed"]
+        lines.append(
+            "Strict matching (headline): invoice numbers equal after removing labels and punctuation, the same calendar date, "
+            "the same amount to the cent. Relaxed matching adds invoice numbers with a similarity ratio of at least 90 and "
+            "day/month swaps of ambiguous numeric dates."
+        )
+        lines.append("")
     lines.append("| Configuration | " + " | ".join(labels[m] for m in acc) + " |")
     lines.append("|---|" + "---|" * len(acc))
     for name, row in summary.iterrows():

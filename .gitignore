@@ -19,6 +19,10 @@ cache.db
 *.sqlite
 *.log
 
+# Thesis drafts (Word) and Word lock files
+thesis*.docx
+~$*.docx
+
 # Old and scratch material
 legacy/
 results_smoke/

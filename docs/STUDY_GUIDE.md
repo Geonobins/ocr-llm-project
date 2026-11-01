@@ -16,7 +16,7 @@ It fits the thesis hardware in every precision, including fp32 (≈1 GB), which 
 ## OCR
 
 **Why Tesseract and not EasyOCR?**
-Measured on all 600 invoices with the same downstream and scorer (`evaluation/ocr_comparison.py`, folder `outputs/2026-10-20_01-52-39_ocr_comparison`): Tesseract reaches F1 0.941, EasyOCR 0.934. On the real scans Tesseract needs 0.89 s per invoice on one CPU thread, EasyOCR 8.0 s on the GPU, with a GPU memory peak of 3.9 GB – almost the whole 4 GB card, so it could not share the GPU with the language model. Tesseract also returns the word-level confidence that the routing needs. The gap in accuracy is mainly the total on real invoices (the true total is in Tesseract's text for 97 % of real invoices, in EasyOCR's for 92 %).
+Measured on all 600 invoices with the same downstream and scorer (`evaluation/ocr_comparison.py`, folder `outputs/2026-10-20_01-52-39_ocr_comparison`): Tesseract reaches F1 0.939, EasyOCR 0.932. On the real scans Tesseract needs 0.89 s per invoice on one CPU thread, EasyOCR 8.0 s on the GPU, with a GPU memory peak of 3.9 GB – almost the whole 4 GB card, so it could not share the GPU with the language model. Tesseract also returns the word-level confidence that the routing needs. The gap in accuracy is mainly the total on real invoices (the true total is in Tesseract's text for 97 % of real invoices, in EasyOCR's for 92 %).
 
 **What does OCR confidence mean and how is it used?**
 Tesseract's per-word confidence (0–100) averaged over the words of the page (`pipeline/ocr.py`, `_assemble_text`). Low confidence means noisy text; the router sends such documents to the full-precision model (`pipeline/routing.py`).
@@ -66,7 +66,7 @@ Single workstation, no server to administer, durable across restarts, lookup ≈
 Token count of the OCR text (Flan-T5 tokenizer) and mean OCR confidence. FAST if `token_count ≤ max_tokens_fast` and `confidence ≥ min_confidence_fast`, FULL otherwise (`pipeline/routing.py`).
 
 **Where do the thresholds come from?**
-From data, not estimation. `evaluation/routing_analysis.py` uses the all-FAST and all-FULL runs to know, for every document, how each model scored and how long it took, then sweeps a grid of thresholds and picks the policy with the largest FAST share whose accuracy stays within 0.5 pp of all-FULL. `routing_analysis.md` in the benchmark folder contains the grid, the accuracy per token bin and per confidence bin, and the chosen pair (525 tokens, confidence 70). `B-tuned` validates it on three fresh runs (F1 0.941).
+From data, not estimation. `evaluation/routing_analysis.py` uses the all-FAST and all-FULL runs to know, for every document, how each model scored and how long it took, then sweeps a grid of thresholds and picks the policy with the largest FAST share whose accuracy stays within 0.5 pp of all-FULL. `routing_analysis.md` in the benchmark folder contains the grid, the accuracy per token bin and per confidence bin, and the chosen pair (525 tokens, confidence 70). `B-tuned` validates it on three fresh runs (F1 0.939).
 
 ## Asynchronous execution
 
@@ -84,8 +84,11 @@ Wall time of `B` is less than the sum of OCR time and LLM time over the document
 **Why is F1 used instead of accuracy?**
 The pipeline may answer `null`. Accuracy would count a null on a null truth and a correct value the same way and would not separate "missed" from "wrong". Each field gets TP/FP/FN/TN, a wrong value counts as FP and FN, and precision, recall and F1 are computed per field and micro-averaged (`evaluation/scorer.py`).
 
-**Why fuzzy matching, and why 90?**
-OCR confuses visually similar characters. A one-character error in `INV-8289-16` should not be scored like a completely wrong number. RapidFuzz `ratio ≥ 90` accepts roughly one substitution in a ten-character string and rejects two. Dates and amounts are compared semantically (same calendar date, same numeric value) rather than fuzzily, because `6,270` and `6,999` are 80% similar as strings and completely different as amounts – this was one of the bugs in the earlier evaluation.
+**Why strict matching, and where is fuzzy matching?**
+The headline score is strict: an invoice number must be the same after removing labels and punctuation, a date the same calendar day with day, month and year present, a total the same amount to the cent. One wrong character in an invoice number is a different invoice, so it counts as wrong. Fuzzy matching (RapidFuzz `ratio ≥ 90`, roughly one substitution in a ten-character string) is reported as a secondary, relaxed score, as the supervisor asked; it also allows a day/month swap when a date is written ambiguously (`07/06/2025`). For A and B both scores are identical (F1 0.939): fuzzy matching never rescued an answer of either architecture; for the VLM it accepts two answers with one extra digit. Amounts are never matched fuzzily, because `6,270` and `6,999` are 80% similar as strings and completely different as amounts.
+
+**Why was the scorer changed after the benchmark?**
+An external review (1 Nov 2026) showed that the original scorer accepted wrong answers: equal digit sequences counted as equal invoice numbers (`009` = `GALT-009`), and day/month swaps were allowed for every date. Every stored run was re-scored without re-running a model; 9 distinct answers changed, F1 moved from 0.941 to 0.939, and no conclusion changed (`docs/RESULTS.md` §11).
 
 **Why are latency and service time both reported for B?**
 In a batched system the time a document waits in the queue depends on how many documents were submitted with it. Service time is the compute spent on the document and is comparable with A; latency includes queueing and, because the benchmark submits all 600 at once, grows with queue position. Throughput is the metric that batching and parallelism actually improve.
@@ -106,6 +109,7 @@ To report mean ± standard deviation. Generation is greedy, so accuracy is stabl
 
 - Flan-T5-base is a small model; on the real invoices it makes field errors that a larger model would not. The thesis measures architecture, not model quality, and both architectures share the errors.
 - The synthetic half of the dataset is easy; results are reported per subset for this reason.
-- The ambiguity of day/month in numeric dates is tolerated by the scorer because the ground truth itself does not resolve it.
+- Some numeric dates are ambiguous in the ground truth itself (`07/06/2025`); only the relaxed score tolerates a day/month swap for them, the strict headline score does not.
+- The routing thresholds were chosen on the same 600 invoices that report accuracy; there is no held-out set. Both routes are practically equally accurate, so this cannot inflate accuracy.
 - Latency of B in the benchmark includes queueing because all documents are submitted at once. With invoices arriving one at a time (`evaluation/latency_experiment.py`), B as benchmarked is slower than A at light load (median 7.9 s vs 1.7 s at 30 per minute) because it waits for a batch of 8; B with dynamic batching answers in about 1–2 s at every load.
 - Quantization reduces memory, not latency, at this model size on this GPU.

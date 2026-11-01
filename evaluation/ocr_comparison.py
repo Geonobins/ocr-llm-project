@@ -134,13 +134,15 @@ def summarize(engine: str, documents, records, read_info: dict, aggregated: dict
 def write_markdown(out_dir: Path, summaries: list[dict]) -> str:
     lines = ["# OCR engine comparison", "",
              "Each engine reads all invoices once; its text then goes through the same downstream as Architecture A "
-             "(row layout, MiniLM line filter, Flan-T5-base fp32, total check) and the same scorer.", "",
-             "| Engine | OCR time mean / median / p95 (s) | Real / synthetic mean (s) | OCR GPU peak (MB) | Mean confidence | F1 all | F1 real | F1 synthetic | Fully correct |",
-             "|---|---|---|---|---|---|---|---|---|"]
+             "(row layout, MiniLM line filter, Flan-T5-base fp32, total check) and the same scorer. "
+             "F1 and fully correct use strict matching; the relaxed columns add fuzzy invoice numbers and day/month swaps of ambiguous numeric dates.", "",
+             "| Engine | OCR time mean / median / p95 (s) | Real / synthetic mean (s) | OCR GPU peak (MB) | Mean confidence | F1 all | F1 real | F1 synthetic | Fully correct | F1 all, relaxed | Fully correct, relaxed |",
+             "|---|---|---|---|---|---|---|---|---|---|---|"]
     for s in summaries:
         lines.append(f"| {s['engine']} | {s['mean_ocr_time_s']:.3f} / {s['median_ocr_time_s']:.3f} / {s['p95_ocr_time_s']:.3f} | "
                      f"{s.get('mean_ocr_time_s_real', float('nan')):.3f} / {s.get('mean_ocr_time_s_synthetic', float('nan')):.3f} | {s['ocr_gpu_peak_mb']:.0f} | {s['mean_confidence']:.1f} | "
-                     f"{s['f1']['all']:.4f} | {s['f1'].get('real', float('nan')):.4f} | {s['f1'].get('synthetic', float('nan')):.4f} | {s['document_accuracy']:.4f} |")
+                     f"{s['f1']['all']:.4f} | {s['f1'].get('real', float('nan')):.4f} | {s['f1'].get('synthetic', float('nan')):.4f} | {s['document_accuracy']:.4f} | "
+                     f"{s.get('f1_relaxed', float('nan')):.4f} | {s.get('document_accuracy_relaxed', float('nan')):.4f} |")
     lines += ["", "Share of ground-truth values that appear in the OCR text (an upper bound for extraction):", "",
               "| Engine | Subset | Invoice number | Date | Total |", "|---|---|---|---|---|"]
     for s in summaries:
@@ -154,12 +156,14 @@ def write_markdown(out_dir: Path, summaries: list[dict]) -> str:
     return text
 
 
-def apply_scores(summary: dict, aggregated: dict) -> dict:
+def apply_scores(summary: dict, aggregated: dict, relaxed: dict) -> dict:
     from pipeline.config import FIELDS
 
     summary["f1"] = {source: aggregated[source]["overall"]["f1"] for source in ("all", "real", "synthetic") if source in aggregated}
     summary["f1_fields"] = {field: aggregated["all"][field]["f1"] for field in FIELDS}
     summary["document_accuracy"] = aggregated["all"]["document_accuracy"]
+    summary["f1_relaxed"] = relaxed["all"]["overall"]["f1"]
+    summary["document_accuracy_relaxed"] = relaxed["all"]["document_accuracy"]
     return summary
 
 
@@ -195,20 +199,23 @@ def refresh_found(out_dir: Path, engine: str) -> dict:
 
 
 def rescore(out_dir: Path) -> str:
-    from evaluation.rescore import rescore_documents
+    from evaluation.rescore import keep_lenient, rescore_documents, write_changes
 
-    summaries = []
+    summaries, changes = [], []
     for engine in ENGINES:
         path = out_dir / engine / "summary.json"
         if not path.exists():
             continue
         payload = json.loads(path.read_text(encoding="utf-8"))
-        aggregated = rescore_documents(out_dir / engine / "documents.csv")
-        payload["scores"] = aggregated
-        payload["summary"] = apply_scores(payload["summary"], aggregated)
+        result = rescore_documents(out_dir / engine / "documents.csv", changes)
+        keep_lenient(payload, "scores")
+        payload["scores"] = result["scores"]
+        payload["scores_relaxed"] = result["scores_relaxed"]
+        payload["summary"] = apply_scores(payload["summary"], result["scores"], result["scores_relaxed"])
         payload["summary"]["found_in_ocr_text"] = refresh_found(out_dir, engine)
         path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
         summaries.append(payload["summary"])
+    write_changes(out_dir, changes)
     return write_markdown(out_dir, summaries)
 
 
@@ -236,7 +243,7 @@ def main() -> None:
 
     import torch
 
-    from evaluation.run_experiments import hardware_info, keep_system_awake, score_records
+    from evaluation.run_experiments import hardware_info, keep_system_awake, relaxed_scores, score_records
     from pipeline.dataset import load_documents
     from pipeline.embeddings import LineSelector
     from pipeline.llm import FieldExtractor
@@ -276,8 +283,10 @@ def main() -> None:
         from evaluation.run_experiments import write_documents
 
         write_documents(engine_dir / "documents.csv", records, scores)
-        summary = summarize(engine, documents, records, read[engine], aggregated)
-        (engine_dir / "summary.json").write_text(json.dumps({"summary": summary, "scores": aggregated}, indent=2), encoding="utf-8")
+        relaxed = relaxed_scores(records, scores)
+        summary = apply_scores(summarize(engine, documents, records, read[engine], aggregated), aggregated, relaxed)
+        payload = {"summary": summary, "scores": aggregated, "scores_relaxed": relaxed}
+        (engine_dir / "summary.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
         summaries.append(summary)
         print(f"  {engine}: OCR {summary['mean_ocr_time_s']:.3f}s/invoice, F1 {summary['f1']['all']}, real {summary['f1'].get('real')}", flush=True)
 

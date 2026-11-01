@@ -83,7 +83,7 @@ def percentile(values, q: float) -> float:
 def run_setting(max_visual_tokens: int, documents, out_dir: Path) -> dict:
     import torch
 
-    from evaluation.run_experiments import score_records, write_documents
+    from evaluation.run_experiments import relaxed_scores, score_records, write_documents
     from pipeline.metrics import DocumentRecord, ResourceMonitor
 
     torch.cuda.empty_cache()
@@ -140,12 +140,11 @@ def run_setting(max_visual_tokens: int, documents, out_dir: Path) -> dict:
         "torch_peak_allocated_mb": round(torch.cuda.max_memory_allocated() / 2**20, 1),
         "peak_rss_mb": resources.get("peak_rss_mb"),
         "peak_gpu_mb": resources.get("peak_gpu_mb"),
-        "f1": {source: aggregated[source]["overall"]["f1"] for source in ("all", "real", "synthetic") if source in aggregated},
-        "f1_fields": {field: aggregated["all"][field]["f1"] for field in ("invoice_number", "date", "total")},
-        "f1_fields_real": {field: aggregated["real"][field]["f1"] for field in ("invoice_number", "date", "total")} if "real" in aggregated else {},
-        "document_accuracy": aggregated["all"]["document_accuracy"],
     }
-    (setting_dir / "summary.json").write_text(json.dumps({"summary": summary, "scores": aggregated}, indent=2), encoding="utf-8")
+    relaxed = relaxed_scores(records, scores)
+    apply_scores(summary, aggregated, relaxed)
+    payload = {"summary": summary, "scores": aggregated, "scores_relaxed": relaxed}
+    (setting_dir / "summary.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     print(f"  VLM {max_visual_tokens} tokens: {summary['mean_time_per_invoice_s']}s/invoice, F1 {summary['f1'].get('all')}, "
           f"real {summary['f1'].get('real')}, GPU peak {summary['torch_peak_allocated_mb']} MB, OOM {summary['out_of_memory']}", flush=True)
     del extractor
@@ -159,34 +158,48 @@ def run_setting(max_visual_tokens: int, documents, out_dir: Path) -> dict:
 def write_markdown(out_dir: Path, summaries: list[dict]) -> str:
     lines = [f"# Vision-language model baseline: {VLM_NAME}", "",
              "The VLM reads the invoice image directly (no OCR) and answers in JSON; answers go through the same normalisation and scorer as A and B. "
-             "One run, one invoice at a time.", "",
-             "| Max visual tokens | Mean visual tokens | Time per invoice mean / median / p95 (s) | Throughput (/min) | GPU peak (MB) | Valid JSON | F1 all | F1 real | F1 synthetic | Real: number / date / total | Fully correct | Out of memory |",
-             "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+             "One run, one invoice at a time. F1 and fully correct use strict matching; the relaxed columns add fuzzy invoice numbers "
+             "and day/month swaps of ambiguous numeric dates.", "",
+             "| Max visual tokens | Mean visual tokens | Time per invoice mean / median / p95 (s) | Throughput (/min) | GPU peak (MB) | Valid JSON | F1 all | F1 real | F1 synthetic | Real: number / date / total | Fully correct | F1 all, relaxed | Fully correct, relaxed | Out of memory |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for s in summaries:
         real = s.get("f1_fields_real") or {}
         lines.append(
             f"| {s['max_visual_tokens']} | {s['mean_visual_tokens']} | {s['mean_time_per_invoice_s']} / {s['median_time_per_invoice_s']} / {s['p95_time_per_invoice_s']} | "
             f"{s['throughput_docs_per_min']} | {s['torch_peak_allocated_mb']:.0f} | {s['valid_json_rate']} | {s['f1'].get('all')} | {s['f1'].get('real')} | "
             f"{s['f1'].get('synthetic')} | {real.get('invoice_number', float('nan')):.2f} / {real.get('date', float('nan')):.2f} / {real.get('total', float('nan')):.2f} | "
-            f"{s['document_accuracy']} | {s['out_of_memory']} |")
+            f"{s['document_accuracy']} | {s.get('f1_relaxed')} | {s.get('document_accuracy_relaxed')} | {s['out_of_memory']} |")
     text = "\n".join(lines) + "\n"
     (out_dir / "summary.md").write_text(text, encoding="utf-8")
     return text
 
 
-def rescore(out_dir: Path) -> str:
-    from evaluation.rescore import rescore_documents
-
+def apply_scores(summary: dict, aggregated: dict, relaxed: dict) -> dict:
     fields = ("invoice_number", "date", "total")
+    summary["f1"] = {source: aggregated[source]["overall"]["f1"] for source in ("all", "real", "synthetic") if source in aggregated}
+    summary["f1_fields"] = {field: aggregated["all"][field]["f1"] for field in fields}
+    summary["f1_fields_real"] = {field: aggregated["real"][field]["f1"] for field in fields} if "real" in aggregated else {}
+    summary["document_accuracy"] = aggregated["all"]["document_accuracy"]
+    summary["f1_relaxed"] = relaxed["all"]["overall"]["f1"]
+    summary["document_accuracy_relaxed"] = relaxed["all"]["document_accuracy"]
+    return summary
+
+
+def rescore(out_dir: Path) -> str:
+    from evaluation.rescore import keep_lenient, rescore_documents, write_changes
+
     summaries = json.loads((out_dir / "summaries.json").read_text(encoding="utf-8"))
+    changes = []
     for summary in summaries:
         setting_dir = out_dir / f"tokens_{summary['max_visual_tokens']}"
-        aggregated = rescore_documents(setting_dir / "documents.csv")
-        summary["f1"] = {source: aggregated[source]["overall"]["f1"] for source in ("all", "real", "synthetic") if source in aggregated}
-        summary["f1_fields"] = {field: aggregated["all"][field]["f1"] for field in fields}
-        summary["f1_fields_real"] = {field: aggregated["real"][field]["f1"] for field in fields} if "real" in aggregated else {}
-        summary["document_accuracy"] = aggregated["all"]["document_accuracy"]
-        (setting_dir / "summary.json").write_text(json.dumps({"summary": summary, "scores": aggregated}, indent=2), encoding="utf-8")
+        result = rescore_documents(setting_dir / "documents.csv", changes)
+        payload = json.loads((setting_dir / "summary.json").read_text(encoding="utf-8"))
+        keep_lenient(payload, "scores")
+        payload["summary"] = apply_scores(summary, result["scores"], result["scores_relaxed"])
+        payload["scores"] = result["scores"]
+        payload["scores_relaxed"] = result["scores_relaxed"]
+        (setting_dir / "summary.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    write_changes(out_dir, changes)
     (out_dir / "summaries.json").write_text(json.dumps(summaries, indent=2), encoding="utf-8")
     return write_markdown(out_dir, sorted(summaries, key=lambda s: s["max_visual_tokens"]))
 

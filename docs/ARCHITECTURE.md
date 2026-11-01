@@ -82,7 +82,7 @@ The full-dataset benchmark confirms the pattern: on a 248 M-parameter model quan
 Ground-truth values were written by hand in whatever format the invoice used (`FEB112020`, `Aug. 22, 2023`, `11.02.2030`, `188,11`, `$1 650.00`, `#1234`). Comparing raw strings would punish the pipeline for formatting, not for errors, so both scoring and output cleaning go through one canonical form:
 
 - **Invoice number**: strip an `Invoice / No / Number / #` prefix, drop every non-alphanumeric character, upper-case. `INV-8289-16` → `INV828916`, `#1234` → `1234`.
-- **Date**: insert spaces at letter/digit boundaries (`FEB112020` → `FEB 11 2020`), split a glued day+year (`112020` → `11 2020`), remove ordinal suffixes, parse with `dateutil`. Day/month order is ambiguous in `07/06/2025`, so two dates are also considered equal when day and month are swapped.
+- **Date**: insert spaces at letter/digit boundaries (`FEB112020` → `FEB 11 2020`), split a glued day+year (`112020` → `11 2020`), remove ordinal suffixes, parse with `dateutil`. For scoring, `parse_complete_date` additionally requires day, month and year to be present. Day/month order is ambiguous in `07/06/2025`; only the relaxed score accepts a swap, and only for dates written that way (`docs/EVALUATION.md` §2).
 - **Amount**: remove currency symbols and spaces, then decide what `,` and `.` mean: if both occur, the last one is the decimal separator; a lone comma followed by two digits is a decimal (`188,11` → 188.11); a comma between groups of three digits is a thousands separator (`6,270` → 6270); `1.300` is treated as a thousands separator because invoice totals are rarely quoted to three decimals.
 
 ### 2.5 Result cache (`pipeline/cache.py`)
@@ -120,7 +120,7 @@ FAST documents go to the 4-bit model with `max_new_tokens=12`; FULL documents go
 
 `routing="all_fast"` and `routing="all_full"` bypass the rule; they exist for the ablation and the threshold analysis.
 
-Outcome on this dataset (see `docs/RESULTS.md` §4): the 4-bit and fp32 models disagree on only 10 of 600 invoices, so the data-driven thresholds are `max_tokens_fast=525`, `min_confidence_fast=70`, which routes 99.8 % of documents to the 4-bit model. The initial estimate (300 tokens, confidence 85) used in configuration `B` routes 505 of 600. When `--configs all` is run, the runner derives the thresholds from that run's own all-FAST and all-FULL results before running `B-tuned`. The mechanism is kept because it is what makes the per-document comparison possible and because it becomes useful as soon as the two routes differ more than two precisions of the same small model.
+Outcome on this dataset (see `docs/RESULTS.md` §4): one of the 4-bit and fp32 models is right and the other wrong on only 11 of 600 invoices, so the data-driven thresholds are `max_tokens_fast=525`, `min_confidence_fast=70`, which routes 99.8 % of documents to the 4-bit model. The initial estimate (300 tokens, confidence 85) used in configuration `B` routes 505 of 600. When `--configs all` is run, the runner derives the thresholds from that run's own all-FAST and all-FULL results before running `B-tuned`. The mechanism is kept because it is what makes the per-document comparison possible and because it becomes useful as soon as the two routes differ more than two precisions of the same small model.
 
 ### 2.7 Metrics (`pipeline/metrics.py`)
 

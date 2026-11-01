@@ -31,7 +31,8 @@ The earlier benchmark in `results/` was measured before the accuracy upgrade (ro
 | Peak RAM, all processes of the run | 1438 MB | 2012 MB | +40 % |
 | Cost per 100 invoices (€0.35 per GPU-hour) | €0.0110 | €0.0019 | 5.8× lower |
 | Same 600 invoices again (warm cache) | – | 0.59 ± 0.03 s | ≈ 1 ms per invoice |
-| F1, all / real / synthetic | 0.941 / 0.892 / 0.989 | 0.941 / 0.894 / 0.987 | equal |
+| F1, all / real / synthetic (strict matching) | 0.939 / 0.890 / 0.989 | 0.939 / 0.892 / 0.986 | equal |
+| Invoices with all three fields correct | 504 of 600 | 503 of 600 | one invoice apart |
 
 Reading the table:
 
@@ -63,12 +64,12 @@ The same pipeline with every invoice on one model, in four precisions:
 
 | Precision | Wall time | LLM per invoice | Pipeline GPU peak | F1 |
 |---|---|---|---|---|
-| fp32 (B-allfull) | 126.1 ± 2.6 s | 0.115 s | 1645 MB | 0.941 |
-| fp16 (B-fp16) | 123.5 ± 0.1 s | 0.079 s | 1049 MB | 0.941 |
-| 4-bit NF4 (B-allfast) | 125.8 ± 0.8 s | 0.115 s | 1102 MB | 0.941 |
-| 8-bit LLM.int8 (B-8bit) | 167.8 ± 1.6 s | 0.258 s | 1176 MB | 0.9385 ± 0.0003 |
+| fp32 (B-allfull) | 126.1 ± 2.6 s | 0.115 s | 1645 MB | 0.9394 |
+| fp16 (B-fp16) | 123.5 ± 0.1 s | 0.079 s | 1049 MB | 0.9394 |
+| 4-bit NF4 (B-allfast) | 125.8 ± 0.8 s | 0.115 s | 1102 MB | 0.9389 |
+| 8-bit LLM.int8 (B-8bit) | 167.8 ± 1.6 s | 0.258 s | 1176 MB | 0.9374 ± 0.0003 |
 
-- **4-bit saves memory, not time**: one third less GPU memory than fp32 at the same speed and accuracy.
+- **4-bit saves memory, not time**: one third less GPU memory than fp32 at the same speed and practically the same accuracy (one invoice apart: the 4-bit model answers `1494-131` for `INV-1494-131`).
 - **fp16 is the best option on this GPU**: fastest LLM step, least memory, same accuracy. For a 248 M-parameter model, bitsandbytes quantization brings no advantage over half precision; its de-quantization cost cancels the saved memory traffic.
 - **8-bit is the slowest** (2.2× slower LLM step than fp32) and slightly non-deterministic: its F1 varies between runs, while every other precision gives identical answers in all three runs.
 
@@ -76,21 +77,26 @@ The same pipeline with every invoice on one model, in four precisions:
 
 - B as designed routes by token count and OCR confidence with the initial thresholds (300 tokens, confidence 85): 505 invoices to the 4-bit model, 95 to fp32.
 - `evaluation/routing_analysis.py` compared the all-4-bit and all-fp32 runs invoice by invoice and searched a grid of thresholds for the largest 4-bit share that keeps field accuracy within 0.5 percentage points of all-fp32. Result: **525 tokens, confidence 70**, which sends 99.8 % of invoices to the 4-bit model.
-- The two models disagree on only 10 invoices (5 each way); accuracy per token-count bin is equal within 0.5 percentage points everywhere.
-- Validated with three fresh runs (B-tuned): 126.1 ± 3.7 s, F1 0.941, 599 of 600 invoices on the 4-bit route.
+- One model is right and the other wrong on only 11 invoices (5 favour the 4-bit model, 6 the fp32 model); accuracy per token-count bin is equal within 0.5 percentage points everywhere. Re-derived with the strict scorer, the thresholds are unchanged.
+- The thresholds were chosen on the same 600 invoices that are used to report accuracy; there is no held-out set. This cannot inflate the reported accuracy, because sending every invoice to either model gives practically the same accuracy (0.934 vs 0.935 field accuracy).
+- Validated with three fresh runs (B-tuned): 126.1 ± 3.7 s, F1 0.939, 599 of 600 invoices on the 4-bit route.
 
 The router works; with two precisions of the same small model it has little to choose between. It becomes useful when the two routes differ more – a small model for simple invoices and a larger one for complex ones.
 
 ## 5. Accuracy
 
-| Version | Arch. | F1 all | F1 real | F1 synthetic | Real: number / date / total | Real invoices fully correct |
-|---|---|---|---|---|---|---|
-| Before the accuracy upgrade | A | 0.847 | 0.704 | 0.989 | 0.93 / 0.86 / 0.32 | 24 % |
-| | B | 0.850 | 0.712 | 0.987 | 0.93 / 0.86 / 0.34 | 26 % |
-| Current code | A | 0.941 | 0.892 | 0.989 | 0.94 / 0.92 / 0.82 | 72 % |
-| | B | 0.941 | 0.894 | 0.987 | 0.94 / 0.92 / 0.83 | 72 % |
+| Version | Scorer | Arch. | F1 all | F1 real | F1 synthetic | Real: number / date / total | Real invoices fully correct |
+|---|---|---|---|---|---|---|---|
+| Before the accuracy upgrade | original | A | 0.847 | 0.704 | 0.989 | 0.93 / 0.86 / 0.32 | 24 % |
+| | original | B | 0.850 | 0.712 | 0.987 | 0.93 / 0.86 / 0.34 | 26 % |
+| Current code | original | A | 0.941 | 0.892 | 0.989 | 0.94 / 0.92 / 0.82 | 72 % |
+| | original | B | 0.941 | 0.894 | 0.987 | 0.94 / 0.92 / 0.83 | 72 % |
+| Current code | strict | A | 0.939 | 0.890 | 0.989 | 0.93 / 0.92 / 0.82 | 71 % |
+| | strict | B | 0.939 | 0.892 | 0.986 | 0.93 / 0.92 / 0.83 | 72 % |
 
-Per field over all 600 invoices (B): invoice number 0.967, date 0.960, total 0.896. Precision equals recall because the model almost never answers `null`, so every miss is also a wrong answer.
+The before/after rows use the original scorer for both versions, so the comparison isolates the extraction upgrade. The pre-upgrade archive is not compared under strict matching: its Architecture A dropped the `INV-` prefix of every synthetic invoice number (`8289-16` for `INV-8289-16`), a post-processing difference of that older version that strict matching counts as wrong (its synthetic F1 would fall to 0.66) and that has nothing to do with the upgrade.
+
+Per field over all 600 invoices (B, strict): invoice number 0.962, date 0.960, total 0.896. Precision (0.935) and recall (0.943) are close, because the model almost never answers `null`, so nearly every miss is also a wrong answer.
 
 **What the upgrade changed.** Error analysis of the previous version showed that on real invoices only about a third of totals were right, and that in 154 of 199 wrong totals the correct amount was already in the text the model received. Two causes:
 
@@ -110,10 +116,11 @@ Each invoice is flagged for review when a field is missing or unreadable, the to
 | | A | B |
 |---|---|---|
 | Accepted without review (straight-through) | 92.0 % | 92.5 % |
-| Fully correct among accepted invoices | 90.9 % | 90.5 % |
-| Fully correct if every invoice were accepted | 84.2 % | 84.2 % |
+| Fully correct among accepted invoices | 90.8 % | 90.1 % |
+| Fully correct if every invoice were accepted | 84.0 % | 83.8 % |
 | Flagged invoices that really were wrong | 45 of 48 (94 %) | 42 of 45 (93 %) |
-| Real invoices: accepted / fully correct among accepted | 87.3 % / 81.3 % | 89.0 % / 80.5 % |
+| Wrong invoices caught by the flag | 45 of 96 (47 %) | 42 of 97 (43 %) |
+| Real invoices: accepted / fully correct among accepted | 87.3 % / 80.9 % | 89.0 % / 80.2 % |
 
 Fewer than 1 in 12 invoices go to a person, and almost all of those really needed checking. The flag cannot detect a wrong invoice number or date that looks valid.
 
@@ -167,15 +174,46 @@ B as benchmarked waits for a batch of 8, so at light load it is slower than A; A
 
 | Engine | OCR s per real invoice | GPU memory for OCR | F1 all | F1 real |
 |---|---|---|---|---|
-| Tesseract 5.4 (CPU) | 0.89 | none | 0.941 | 0.892 |
-| EasyOCR 1.7.2 (GPU) | 8.00 | 3883 MB peak | 0.934 | 0.871 |
+| Tesseract 5.4 (CPU) | 0.89 | none | 0.939 | 0.890 |
+| EasyOCR 1.7.2 (GPU) | 8.00 | 3883 MB peak | 0.932 | 0.867 |
 
 **Vision-language model** (`outputs/2026-10-20_23-54-32_vlm_baseline`, Qwen2-VL-2B in 4-bit NF4, at most 1024 visual tokens, image only):
 
 | System | Wall time per invoice | Pipeline GPU peak | F1 all | F1 real | Fully correct of 600 |
 |---|---|---|---|---|---|
-| A | 1.13 s | 1067 MB | 0.941 | 0.892 | 505 |
-| B | 0.20 s | 1996 MB | 0.941 | 0.894 | 505 |
-| VLM | 3.90 s | 1745 MB | 0.966 | 0.930 | 541 |
+| A | 1.13 s | 1067 MB | 0.939 | 0.890 | 504 |
+| B | 0.20 s | 1996 MB | 0.939 | 0.892 | 503 |
+| VLM | 3.90 s | 1745 MB | 0.964 | 0.927 | 538 |
 
-The VLM is more accurate but about 19× slower per invoice than B. Estimated from the stored results: sending only the 45 invoices that B flags for review to the VLM would give 541 fully correct invoices for about 0.29 s of extra GPU time per invoice. Resolution probe (20 invoices, one setting per process, `outputs/2026-10-21_00-35-48_vlm_resolution_probe_20docs`): 512 tokens 1568 MB, 1024 tokens 1745 MB, 2048 tokens 2329 MB; accuracy did not improve beyond 1024.
+With relaxed matching the VLM reaches 0.965 and 540 (two invoice numbers with one extra digit); A and B do not change. The VLM is more accurate but about 19× slower per invoice than B's batched average and 3.5× slower than A, which like the VLM reads one invoice at a time. Estimated from the stored results: sending only the 45 invoices that B flags for review to the VLM would give 539 fully correct invoices (B is right on 3 of them, the VLM on 39) for about 0.3 s of extra GPU time per invoice. Resolution probe (20 invoices, one setting per process, `outputs/2026-10-21_00-35-48_vlm_resolution_probe_20docs`): 512 tokens 1568 MB, 1024 tokens 1745 MB, 2048 tokens 2329 MB; accuracy did not improve beyond 1024.
+
+## 11. Scorer change (1 Nov 2026)
+
+An external review showed that the original scorer accepted some wrong answers (rules and reasons in `docs/EVALUATION.md` §2 and §7.4). The scorer now reports **strict** matching as the headline metric and **relaxed** matching (fuzzy invoice numbers ≥ 90, day/month swap for ambiguous numeric dates) as a secondary metric. All stored predictions were re-scored; no model was re-run.
+
+| System | F1, original → strict | Fully correct, original → strict | F1 and fully correct, relaxed |
+|---|---|---|---|
+| A | 0.9406 → 0.9394 | 505 → 504 | 0.9394 / 504 |
+| B (and every B variant except B-8bit, B-allfull, B-fp16) | 0.9406 → 0.9389 | 505 → 503 | 0.9389 / 503 |
+| B-allfull, B-fp16 | 0.9406 → 0.9394 | 505 → 504 | 0.9394 / 504 |
+| B-8bit | 0.9385 → 0.9374 | 501.3 → 500.3 | 0.9374 / 500.3 |
+| Tesseract → A downstream | 0.9406 → 0.9394 | 505 → 504 | 0.9394 / 504 |
+| EasyOCR → A downstream | 0.9342 → 0.9319 | 496 → 493 | 0.9319 / 493 |
+| VLM (Qwen2-VL-2B) | 0.9656 → 0.9639 | 541 → 538 | 0.9651 / 540 |
+
+Only 9 distinct answers changed:
+
+| Invoice | Field | Answer | Ground truth | Original rule that accepted it | Where |
+|---|---|---|---|---|---|
+| 14 | invoice number | `009` | `GALT-009` | same digits | A, B and all variants, Tesseract |
+| 579 | invoice number | `73627 Square` | `73627` | same digits | A, B and all variants, both OCR engines |
+| 131 | invoice number | `1494-131` | `INV-1494-131` | same digits | B variants that use the 4-bit model |
+| 1 | invoice number | `01234 Richard Sanchez` | `01234` | same digits | EasyOCR |
+| 339 | invoice number | `93632 Avenue` | `93632` | same digits | EasyOCR |
+| 571, 572 | invoice number | `898724443` | `89872443` | fuzzy ratio ≥ 90 (still accepted by relaxed) | VLM |
+| 436 | total | `1,1696` | `$11696` | lenient separator parsing | VLM |
+| 495 | date | `21/2022` | `Jun 21, 2022` | fuzzy fallback for unparseable dates | EasyOCR |
+
+The day/month swap, the fuzzy fallback for totals, negative amounts and answers containing several amounts never occurred in any stored run. For A and B relaxed equals strict: fuzzy matching never rescued an answer of either architecture. The comparison of A and B, the ranking of the OCR engines and the advantage of the VLM are unchanged.
+
+**Ground-truth labels to check.** Checking every label against the strict rules found four real invoices whose date label is not a date: 489 (`Invoice Date`), 503 (`Invoice Date`), 510 (`01`) and 534 (`THANK YOU..`); the invoice-number labels of 489 (`#`), 503 (`FLYING COLOURS CORPORATION`) and 534 (`ID`) are doubtful as well. Invoice 489 was compared with its image: it has no invoice number and no date, so both labels should be empty. The VLM answers `null` for both fields on all four invoices and is currently marked wrong. The labels are left unchanged here; they belong to the label audit.

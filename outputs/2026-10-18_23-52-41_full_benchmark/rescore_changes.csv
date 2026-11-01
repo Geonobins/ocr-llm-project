@@ -1,0 +1,97 @@
+file,invoice,field,prediction,truth,before,strict,relaxed
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/A/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-1worker/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-6workers/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-8bit/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfast/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-allfull/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-fp16/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nobatch/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-nocache/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-tuned/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_1/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_1/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_1/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_2/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_2/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_2/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_3/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_3/documents.csv,test_invoice131,invoice_number,1494-131,INV-1494-131,TP,FP_FN,FP_FN
+outputs/2026-10-18_23-52-41_full_benchmark/runs/B-warm/run_3/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN

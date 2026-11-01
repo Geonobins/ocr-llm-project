@@ -1,0 +1,7 @@
+file,invoice,field,prediction,truth,before,strict,relaxed
+outputs/2026-10-20_01-52-39_ocr_comparison/tesseract/documents.csv,test_invoice14,invoice_number,009,GALT-009,TP,FP_FN,FP_FN
+outputs/2026-10-20_01-52-39_ocr_comparison/tesseract/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN
+outputs/2026-10-20_01-52-39_ocr_comparison/easyocr/documents.csv,test_invoice1,invoice_number,01234 Richard Sanchez,01234,TP,FP_FN,FP_FN
+outputs/2026-10-20_01-52-39_ocr_comparison/easyocr/documents.csv,test_invoice339,invoice_number,93632 Avenue,93632,TP,FP_FN,FP_FN
+outputs/2026-10-20_01-52-39_ocr_comparison/easyocr/documents.csv,test_invoice495,date,21/2022,"Jun 21, 2022",TP,FP_FN,FP_FN
+outputs/2026-10-20_01-52-39_ocr_comparison/easyocr/documents.csv,test_invoice579,invoice_number,73627 Square,73627,TP,FP_FN,FP_FN

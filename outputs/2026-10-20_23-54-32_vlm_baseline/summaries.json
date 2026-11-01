@@ -18,20 +18,22 @@
     "peak_rss_mb": 1841.8,
     "peak_gpu_mb": 2474.5,
     "f1": {
-      "all": 0.9656,
-      "real": 0.9302,
+      "all": 0.9639,
+      "real": 0.9268,
       "synthetic": 1.0
     },
     "f1_fields": {
-      "invoice_number": 0.9932,
+      "invoice_number": 0.9898,
       "date": 0.978,
-      "total": 0.9258
+      "total": 0.9241
     },
     "f1_fields_real": {
-      "invoice_number": 0.9863,
+      "invoice_number": 0.9794,
       "date": 0.9552,
-      "total": 0.8498
+      "total": 0.8464
     },
-    "document_accuracy": 0.9017
+    "document_accuracy": 0.8967,
+    "f1_relaxed": 0.9651,
+    "document_accuracy_relaxed": 0.9
   }
 ]

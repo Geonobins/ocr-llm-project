@@ -40,7 +40,7 @@ pipeline/            the two architectures and their building blocks
   arch_a.py          Architecture A
   arch_b.py          Architecture B
 evaluation/
-  scorer.py          field normalization + fuzzy matching → TP/FP/FN/TN → precision, recall, F1
+  scorer.py          strict (headline) and relaxed (fuzzy) field matching → TP/FP/FN/TN → precision, recall, F1
   run_experiments.py runs configurations × repetitions, writes per-document CSV and summary JSON
   report.py          aggregates the runs of an output folder into summary.md, summary.csv and figures
   output.py          new output folder per run, log capture, run_info.json

@@ -25,11 +25,21 @@ Each field of each document is compared with its ground truth **after normalisat
 | value | matching value | TP |
 | value | wrong value | FP and FN (a wrong value is both a false positive and a miss) |
 
-"Matching" means:
+Every document is scored twice. **Strict** matching is the headline metric; **relaxed** matching is reported next to it as a secondary metric, because the supervisor asked for fuzzy matching at a 90 % threshold.
 
-- **invoice number**: canonical strings equal, or their digit sequences equal (≥ 3 digits), or RapidFuzz `ratio ≥ 90` on the canonical strings – this tolerates OCR confusions such as `l`/`1` or `O`/`0` in one character of a long number.
-- **date**: both parse and denote the same calendar date (day/month swap tolerated); if either cannot be parsed, the strings are compared after whitespace/case normalisation with the same fuzzy threshold on their digit sequences.
-- **total**: both parse as amounts and differ by less than 0.005; otherwise the fuzzy threshold on digit sequences.
+Strict "matching" means:
+
+- **invoice number**: equal after removing a leading label (`Invoice No:`, `#`), all characters other than letters and digits, and upper-casing. `INV-8289-16` = `inv 8289 16`, but `8289-16` ≠ `INV-8289-16`, `009` ≠ `GALT-009` and `73627 Square` ≠ `73627`: a missing prefix or extra text makes the number wrong.
+- **date**: both denote the same calendar day, and each value must contain a day, a month and a year (`parse_complete_date` parses with two different default dates and rejects the value if the results differ, so `June 2022` or `21/2022` never borrows the missing part from the day the scorer runs). If neither value is a date (`MM/DD/YYYY` on a blank template), the cleaned strings must be equal.
+- **total**: both are a single, well-formed amount and equal to the cent (`parse_exact_amount`, `Decimal`, sign kept: `(123.45)` and `-123.45` are negative). Currency symbols are ignored; the task measures the numeric total only. `Total 123.45 tax 9.00`, `123.45 garbage` or malformed separators such as `1,1696` are not amounts.
+
+Relaxed matching accepts everything strict matching accepts, plus:
+
+- **invoice number**: RapidFuzz `ratio ≥ 90` on the canonical strings (one wrong character in a 10-character number).
+- **date**: day and month swapped, but only when one of the two values is written as an ambiguous numeric date such as `07/06/2025` (both numbers ≤ 12). Unambiguous dates (`2024-04-05`, `April 5, 2024`, `13/04/2024`) are never swapped.
+- **total**: nothing; amounts are never matched fuzzily.
+
+The pipelines never use these rules; they only decide how a stored answer is graded.
 
 From the outcomes:
 
@@ -142,6 +152,9 @@ Every experiment stores its predictions per invoice, so a scorer change never re
 - OCR comparison: `python -m evaluation.ocr_comparison --rescore --out <folder>` (also recomputes whether each value appears in the stored OCR text)
 - VLM: `python -m evaluation.vlm_baseline --rescore --out <folder>`
 
-This was used once: the OCR comparison exposed that dates written without a space after the comma (`April 19,2024`) were parsed with the current year. `parse_date` now inserts the space first (unit test in `tests/test_normalize.py`), and all stored runs were re-scored. The main benchmark did not change, because its labels and predictions in that format always appeared together; EasyOCR's and the VLM's scores rose.
+This was used twice.
+
+1. The OCR comparison exposed that dates written without a space after the comma (`April 19,2024`) were parsed with the current year. `parse_date` now inserts the space first (unit test in `tests/test_normalize.py`), and all stored runs were re-scored. The main benchmark did not change, because its labels and predictions in that format always appeared together; EasyOCR's and the VLM's scores rose.
+2. On 1 Nov 2026 an external review showed that the original scorer accepted wrong answers: equal digit sequences counted as equal invoice numbers (`AB1234` = `CD1234`, `009` = `GALT-009`), fuzzy matching accepted one wrong digit, day and month were swapped for every date, and unparseable dates and totals fell back to fuzzy digit matching. The scorer was replaced by the strict and relaxed rules of §2 and every stored run was re-scored. Each re-scored `summary.json` keeps the earlier values under `scores_lenient_scorer` (and `review_lenient_scorer`); each output folder whose results changed has a `rescore_changes.csv` listing every changed field with the prediction, the truth, the old outcome and the strict and relaxed outcomes. 9 distinct answers changed, see `docs/RESULTS.md` §11.
 
 Run each VLM setting in its own process (`--tokens 512`, then `--tokens 1024`, …): when several settings ran in one process, the GPU peak of the later settings included the model of the earlier one. The probe in `outputs/_superseded/` has that fault; `outputs/2026-10-21_00-35-48_vlm_resolution_probe_20docs` is the corrected one.

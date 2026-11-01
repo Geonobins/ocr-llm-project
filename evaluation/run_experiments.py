@@ -95,37 +95,27 @@ def write_documents(path: Path, records, scores) -> None:
 
 
 def score_records(records) -> tuple[list[dict], dict]:
-    from evaluation.scorer import aggregate, score_document
+    from evaluation.scorer import aggregate_by_source, score_both
 
-    scores = [score_document(record.prediction, record.truth) for record in records]
-    by_source = {}
-    for source in ("real", "synthetic"):
-        subset = [score for record, score in zip(records, scores) if record.source == source]
-        if subset:
-            by_source[source] = aggregate(subset)
-    return scores, {"all": aggregate(scores), **by_source}
+    scores = [score_both(record.prediction, record.truth) for record in records]
+    return scores, aggregate_by_source(scores, [record.source for record in records])
+
+
+def relaxed_scores(records, scores) -> dict:
+    from evaluation.scorer import RELAXED_PREFIX, aggregate_by_source
+
+    return aggregate_by_source(scores, [record.source for record in records], RELAXED_PREFIX)
 
 
 def review_summary(records, scores) -> dict:
-    result = {}
-    for source in ("all", "real", "synthetic"):
-        pairs = [(r, s) for r, s in zip(records, scores) if not r.error and (source == "all" or r.source == source)]
-        if not pairs:
-            continue
-        flagged = [s for r, s in pairs if r.features.get("needs_review")]
-        accepted = [s for r, s in pairs if not r.features.get("needs_review")]
-        wrong = [s for _, s in pairs if not s["all_correct"]]
-        result[source] = {
-            "documents": len(pairs),
-            "straight_through_rate": round(len(accepted) / len(pairs), 4),
-            "flagged": len(flagged),
-            "accuracy_auto_accepted": round(sum(s["all_correct"] for s in accepted) / len(accepted), 4) if accepted else 0.0,
-            "accuracy_without_review": round(sum(s["all_correct"] for _, s in pairs) / len(pairs), 4),
-            "wrong_documents": len(wrong),
-            "wrong_caught_by_flag": sum(1 for s in flagged if not s["all_correct"]),
-            "flag_precision": round(sum(1 for s in flagged if not s["all_correct"]) / len(flagged), 4) if flagged else 0.0,
-        }
-    return result
+    from evaluation.scorer import review_summary as summarize
+
+    entries = [
+        {"source": record.source, "needs_review": bool(record.features.get("needs_review")), "all_correct": score["all_correct"]}
+        for record, score in zip(records, scores)
+        if not record.error
+    ]
+    return summarize(entries)
 
 
 def build_architecture(entry: dict, out_dir: Path | None = None):
@@ -189,6 +179,7 @@ def save_run(out_dir: Path, name: str, run: int, entry: dict, records, wall, res
         "hardware": hardware_info(),
         "metrics": summary,
         "scores": aggregated,
+        "scores_relaxed": relaxed_scores(records, scores),
         "review": review_summary(records, scores),
     }
     with open(run_dir / "summary.json", "w", encoding="utf-8") as handle:

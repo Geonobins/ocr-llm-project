@@ -9,16 +9,16 @@
     "p95_ocr_time_s": 13.4877,
     "mean_confidence": 86.61,
     "f1": {
-      "all": 0.9342,
-      "real": 0.8711,
+      "all": 0.9319,
+      "real": 0.8666,
       "synthetic": 0.9967
     },
     "f1_fields": {
-      "invoice_number": 0.9698,
-      "date": 0.9631,
+      "invoice_number": 0.9648,
+      "date": 0.9614,
       "total": 0.8698
     },
-    "document_accuracy": 0.8267,
+    "document_accuracy": 0.8217,
     "found_in_ocr_text": {
       "all": {
         "invoice_number": 0.9899,
@@ -38,9 +38,148 @@
     },
     "mean_ocr_time_s_all": 4.1555,
     "mean_ocr_time_s_real": 7.9985,
-    "mean_ocr_time_s_synthetic": 0.3124
+    "mean_ocr_time_s_synthetic": 0.3124,
+    "f1_relaxed": 0.9319,
+    "document_accuracy_relaxed": 0.8217
   },
   "scores": {
+    "all": {
+      "invoice_number": {
+        "precision": 0.96,
+        "recall": 0.9697,
+        "f1": 0.9648,
+        "accuracy": 0.96,
+        "tp": 576,
+        "fp": 24,
+        "fn": 18,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.955,
+        "recall": 0.9679,
+        "f1": 0.9614,
+        "accuracy": 0.955,
+        "tp": 573,
+        "fp": 27,
+        "fn": 19,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8683,
+        "recall": 0.8712,
+        "f1": 0.8698,
+        "accuracy": 0.8683,
+        "tp": 521,
+        "fp": 79,
+        "fn": 77,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9278,
+        "recall": 0.9361,
+        "f1": 0.9319,
+        "accuracy": 0.9278,
+        "tp": 1670,
+        "fp": 130,
+        "fn": 114,
+        "tn": 0
+      },
+      "documents": 600,
+      "documents_fully_correct": 493,
+      "document_accuracy": 0.8217
+    },
+    "real": {
+      "invoice_number": {
+        "precision": 0.92,
+        "recall": 0.9388,
+        "f1": 0.9293,
+        "accuracy": 0.92,
+        "tp": 276,
+        "fp": 24,
+        "fn": 18,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9133,
+        "recall": 0.9384,
+        "f1": 0.9257,
+        "accuracy": 0.9133,
+        "tp": 274,
+        "fp": 26,
+        "fn": 18,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.7433,
+        "recall": 0.7483,
+        "f1": 0.7458,
+        "accuracy": 0.7433,
+        "tp": 223,
+        "fp": 77,
+        "fn": 75,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.8589,
+        "recall": 0.8744,
+        "f1": 0.8666,
+        "accuracy": 0.8589,
+        "tp": 773,
+        "fp": 127,
+        "fn": 111,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 196,
+      "document_accuracy": 0.6533
+    },
+    "synthetic": {
+      "invoice_number": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 300,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 299,
+        "fp": 1,
+        "fn": 1,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.9933,
+        "recall": 0.9933,
+        "f1": 0.9933,
+        "accuracy": 0.9933,
+        "tp": 298,
+        "fp": 2,
+        "fn": 2,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 897,
+        "fp": 3,
+        "fn": 3,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 297,
+      "document_accuracy": 0.99
+    }
+  },
+  "scores_lenient_scorer": {
     "all": {
       "invoice_number": {
         "precision": 0.965,
@@ -130,6 +269,143 @@
       "documents": 300,
       "documents_fully_correct": 199,
       "document_accuracy": 0.6633
+    },
+    "synthetic": {
+      "invoice_number": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0,
+        "tp": 300,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 299,
+        "fp": 1,
+        "fn": 1,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.9933,
+        "recall": 0.9933,
+        "f1": 0.9933,
+        "accuracy": 0.9933,
+        "tp": 298,
+        "fp": 2,
+        "fn": 2,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9967,
+        "recall": 0.9967,
+        "f1": 0.9967,
+        "accuracy": 0.9967,
+        "tp": 897,
+        "fp": 3,
+        "fn": 3,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 297,
+      "document_accuracy": 0.99
+    }
+  },
+  "scores_relaxed": {
+    "all": {
+      "invoice_number": {
+        "precision": 0.96,
+        "recall": 0.9697,
+        "f1": 0.9648,
+        "accuracy": 0.96,
+        "tp": 576,
+        "fp": 24,
+        "fn": 18,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.955,
+        "recall": 0.9679,
+        "f1": 0.9614,
+        "accuracy": 0.955,
+        "tp": 573,
+        "fp": 27,
+        "fn": 19,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.8683,
+        "recall": 0.8712,
+        "f1": 0.8698,
+        "accuracy": 0.8683,
+        "tp": 521,
+        "fp": 79,
+        "fn": 77,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.9278,
+        "recall": 0.9361,
+        "f1": 0.9319,
+        "accuracy": 0.9278,
+        "tp": 1670,
+        "fp": 130,
+        "fn": 114,
+        "tn": 0
+      },
+      "documents": 600,
+      "documents_fully_correct": 493,
+      "document_accuracy": 0.8217
+    },
+    "real": {
+      "invoice_number": {
+        "precision": 0.92,
+        "recall": 0.9388,
+        "f1": 0.9293,
+        "accuracy": 0.92,
+        "tp": 276,
+        "fp": 24,
+        "fn": 18,
+        "tn": 0
+      },
+      "date": {
+        "precision": 0.9133,
+        "recall": 0.9384,
+        "f1": 0.9257,
+        "accuracy": 0.9133,
+        "tp": 274,
+        "fp": 26,
+        "fn": 18,
+        "tn": 0
+      },
+      "total": {
+        "precision": 0.7433,
+        "recall": 0.7483,
+        "f1": 0.7458,
+        "accuracy": 0.7433,
+        "tp": 223,
+        "fp": 77,
+        "fn": 75,
+        "tn": 0
+      },
+      "overall": {
+        "precision": 0.8589,
+        "recall": 0.8744,
+        "f1": 0.8666,
+        "accuracy": 0.8589,
+        "tp": 773,
+        "fp": 127,
+        "fn": 111,
+        "tn": 0
+      },
+      "documents": 300,
+      "documents_fully_correct": 196,
+      "document_accuracy": 0.6533
     },
     "synthetic": {
       "invoice_number": {

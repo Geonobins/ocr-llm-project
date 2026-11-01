@@ -207,12 +207,17 @@ def main() -> None:
     from evaluation.output import capture_console, go_offline, new_run_dir, package_versions, pipeline_settings, write_run_info
 
     if args.rescore:
-        from evaluation.rescore import rescore_documents
+        from evaluation.rescore import keep_lenient, rescore_documents, write_changes
 
+        changes = []
         for path in sorted(Path(args.out).glob("runs/*/rate_*/run_*/summary.json")):
             payload = json.loads(path.read_text(encoding="utf-8"))
-            payload["f1_all"] = rescore_documents(path.parent / "documents.csv")["all"]["overall"]["f1"]
+            result = rescore_documents(path.parent / "documents.csv", changes)
+            keep_lenient(payload, "f1_all")
+            payload["f1_all"] = result["scores"]["all"]["overall"]["f1"]
+            payload["f1_all_relaxed"] = result["scores_relaxed"]["all"]["overall"]["f1"]
             path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        write_changes(Path(args.out), changes)
     if args.report_only or args.rescore:
         print(report(Path(args.out)))
         return
